@@ -79,8 +79,49 @@ const TestimonialsSection = () => {
     }
   ];
 
+  const NextArrow = ({ onClick }) => {
+    return (
+      <button
+        className={`${styles.slickArrow} ${styles.nextArrow}`}
+        onClick={onClick}
+        aria-label="Next testimonial"
+      >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path
+          d="M4.16699 10H15.8337M15.8337 10L10.0003 4.16667M15.8337 10L10.0003 15.8333"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      </button>
+    );
+  };
+
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <button
+        className={`${styles.slickArrow} ${styles.prevArrow}`}
+        onClick={onClick}
+        aria-label="Previous testimonial"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M4.16699 10H15.8337M15.8337 10L10.0003 4.16667M15.8337 10L10.0003 15.8333"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+    );
+  };
+
+
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -88,7 +129,9 @@ const TestimonialsSection = () => {
     // autoplay: true,
     // autoplaySpeed: 5000,
     pauseOnHover: true,
-    arrows: false,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -232,6 +275,34 @@ const TestimonialsSection = () => {
               </div>
             ))}
           </Slider>
+
+          {/*
+          <div className={styles.slickArrows}>
+             <button type="button" className={`${styles.slickArrow} ${styles.prevArrow}`}>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4.16699 10H15.8337M15.8337 10L10.0003 4.16667M15.8337 10L10.0003 15.8333"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+             <button type="button" className={`${styles.slickArrow} ${styles.nextArrow}`}>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M4.16699 10H15.8337M15.8337 10L10.0003 4.16667M15.8337 10L10.0003 15.8333"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          */}
+
         </motion.div>
       </div>
     </section>

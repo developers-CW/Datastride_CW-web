@@ -2,7 +2,11 @@ import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import PrimaryButton from "../../Shared/PrimaryButton";
+import { useRouter } from "next/router";
+
 const TrustSection = () => {
+  const router = useRouter();
+  
   const features = [
     {
       id: 1,
@@ -130,12 +134,7 @@ const TrustSection = () => {
 
         <PrimaryButton
           label="Request a Demo"
-          onClick={() => {
-            const contactSection = document.getElementById('contact-section');
-            if (contactSection) {
-              contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          }}
+          onClick={() => router.push("/contact-us")}
           className={styles.primaryButton}
           backgroundColor="#0C8CE9"
           textColor="#FFFFFF"

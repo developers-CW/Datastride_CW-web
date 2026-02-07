@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const ProductCtaBanner = () => {
   const teamPhotos = [
@@ -12,6 +13,8 @@ const ProductCtaBanner = () => {
     "/images/about-p-6.png",
   ];
 
+  const router = useRouter();
+  
   return (
     <section className={styles.ctaBannerSection}>
       <div className={`container ${styles.container}`}>
@@ -70,6 +73,7 @@ const ProductCtaBanner = () => {
               className={styles.ctaButton}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => router.push("/contact-us")}
             >
               <span>Contact us</span>
               <div

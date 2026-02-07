@@ -74,8 +74,9 @@
 
 // Carousel Wrapper
 .carouselWrapper {
+  position: relative;
   margin: $spacing-7xl auto 0 auto;
-  padding-bottom: 60px; // Space for dots
+  padding-bottom: 48px;
 
   @include mobile {
     margin: 32px auto 0 auto;
@@ -168,6 +169,39 @@
       border-radius: 50%;
     }
   }
+}
+
+.slickArrows {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.slickArrow {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  margin-top: 16px;
+  color: $base-white;
+  border: 0;
+  border-radius: 32px;
+  background-color: #0C8CE9;
+  cursor: pointer;
+}
+
+.nextArrow {
+  transform: translateX(24px);
+}
+
+.prevArrow {
+  transform: translateX(-24px) rotate(180deg);
 }
 
 // Slide Styles

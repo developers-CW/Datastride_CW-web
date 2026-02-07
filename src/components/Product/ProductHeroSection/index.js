@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const ProductHeroSection = () => {
   const brandLogos = [
@@ -13,6 +14,8 @@ const ProductHeroSection = () => {
     { name: "Thomas Cook", logo: "/images/brands/thomas-cook.svg" },
     { name: "wazirx", logo: "/images/brands/wazirx.svg" },
   ];
+  
+  const router = useRouter();
 
   return (
     <section className={styles.heroSection}>
@@ -47,6 +50,7 @@ const ProductHeroSection = () => {
             className={styles.ctaButton}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => router.push("/contact-us")}
           >
             <span>Request a Demo</span>
             <div

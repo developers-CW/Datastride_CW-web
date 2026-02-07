@@ -92,10 +92,6 @@
   position: relative;
   padding-bottom: $spacing-xs;
 
-  &:hover {
-    color: $indigo-900;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -103,7 +99,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: $brand-500;
+    background: #0c8ce9;
     transition: width 0.3s ease;
   }
 
@@ -112,11 +108,15 @@
   }
 
   // Active state (for the current page)
+  /*
   &.active {
-    color: $indigo-900;
-    border-bottom: 1px solid rgba(32, 11, 86, 0.65);
-    ;
+    color: #0c8ce9;
+
+    &::after {
+      width: 100%;
+    }
   }
+  */
 
   @media (max-width: 1024px) {
     font-size: 15px;

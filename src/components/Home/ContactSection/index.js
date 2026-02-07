@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import PrimaryButton from "../../Shared/PrimaryButton";
+import { useEffect } from "react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -96,6 +97,18 @@ const ContactSection = () => {
     "Other",
   ];
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://js-na2.hsforms.net/forms/embed/244447843.js";
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+
   return (
     <section id="contact-section" className={styles.contactSection}>
       <div className={`container ${styles.container}`}>
@@ -159,8 +172,9 @@ const ContactSection = () => {
             transition={{ duration: 0.6 }}
             className={styles.rightContent}
           >
+            {/*
+
             <form onSubmit={handleSubmit} className={styles.contactForm}>
-              {/* Row 1: Full Name & Company Email */}
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <input
@@ -187,7 +201,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Row 2: Phone Number & How can we help */}
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <input
@@ -222,7 +235,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Company Name - Full Width */}
               <div className={styles.formGroup}>
                 <input
                   type="text"
@@ -235,7 +247,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              {/* Message Textarea */}
               <div className={styles.formGroup}>
                 <textarea
                   name="message"
@@ -248,7 +259,6 @@ const ContactSection = () => {
                 />
               </div>
 
-              {/* Newsletter Opt-in */}
               <div className={styles.checkboxGroup}>
                 <input
                   type="checkbox"
@@ -270,7 +280,6 @@ const ContactSection = () => {
                 </label>
               </div>
 
-              {/* Submit Button */}
               <PrimaryButton
                 type="submit"
                 label={isSubmitting ? "Submitting..." : "Submit form"}
@@ -281,7 +290,6 @@ const ContactSection = () => {
                 arrowColor="#0C8CE9"
               />
 
-              {/* Success/Error Messages - Below Form */}
               {submitStatus === 'success' && (
                 <motion.div 
                   initial={{ opacity: 0, y: -10 }}
@@ -308,6 +316,15 @@ const ContactSection = () => {
                 </motion.div>
               )}
             </form>
+
+            */}
+
+            <div
+              className="hs-form-frame"
+              data-region="na2"
+              data-form-id="7b1dd0a5-befb-47a1-b8f9-3a704dfe105b"
+              data-portal-id="244447843"
+            />
           </motion.div>
         </div>
       </div>

@@ -6,34 +6,42 @@ const ProductServicesSection = () => {
     {
       title: "Conversational Insights",
       description: "Ask questions in plain language. Get instant answers from any connected dataset.",
+      link: "",
     },
     {
       title: "Automated Workflows",
       description: "Describe what you need. Sia builds interactive dashboards automatically.",
+      link: "",
     },
     {
       title: "Predictive Analytics",
       description: "Run forecasting, anomaly detection, and trend analysis through guided workflows.",
+      link: "",
     },
     {
       title: "Real-Time Data Monitoring",
       description: "Track KPIs as they update. Set alerts and act before problems escalate.",
+      link: "",
     },
     {
       title: "Data Engineering at Scale",
       description: "Build ETL pipelines using 350+ Pandas and PySpark functions or custom code.",
+      link: "",
     },
     {
       title: "Model Building and Deployment",
       description: "Train ML models, validate performance, and deploy via API. No separate MLOps needed.",
+      link: "",
     },
     {
       title: "Workflow Automation",
       description: "Design automated workflows with scheduling, triggers, and instant API deployment.",
+      link: "",
     },
     {
       title: "Version-Controlled Pipelines",
       description: "Track changes, roll back when needed, and collaborate without conflicts.",
+      link: "",
     },
   ];
 
@@ -69,7 +77,7 @@ const ProductServicesSection = () => {
             >
               <h3 className={styles.cardTitle}>{service.title}</h3>
               <p className={styles.cardDescription}>{service.description}</p>
-              <a href="#" className={styles.learnMoreLink}>
+              <a href="/contact-us" className={styles.learnMoreLink}>
                 <span>Learn more</span>
                 <svg
                   width="16"

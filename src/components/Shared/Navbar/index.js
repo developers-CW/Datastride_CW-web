@@ -68,9 +68,9 @@ const Navbar = () => {
       className={styles.navbar}
     >
       <div className={`container ${styles.navContainer}`}>
-        <div className={styles.logo}>
+        <a href="/" className={styles.logo}>
           <Image src="/images/SIALogo.svg" alt="Logo" width={100} height={100} />
-        </div>
+        </a>
         {/* Navigation Links */}
         <ul className={styles.navLinks}>
           {navLinks.map((link, index) => (

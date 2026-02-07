@@ -150,7 +150,7 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #312e81;
+  background: #0C8CE9;
   color: $base-white;
   border: none;
   cursor: pointer;
@@ -161,9 +161,9 @@
   transition: all 0.3s ease;
   flex-shrink: 0;
 
-  &:hover {
-    background: #1e1b4b;
-  }
+  // &:hover {
+  //   background: #1e1b4b;
+  // }
 }
 
 // CTA Section at top
@@ -329,7 +329,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #312e81;
+  background: #0C8CE9;
   color: $base-white;
   border: none;
   cursor: pointer;
@@ -340,7 +340,7 @@
   transition: all 0.3s ease;
 
   &:hover {
-    background: #1e1b4b;
+    // background: #1e1b4b;
     transform: translateY(-50%) scale(1.05);
   }
 

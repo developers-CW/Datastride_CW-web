@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import PrimaryButton from "../../Shared/PrimaryButton";
 import SecondaryButton from "../../Shared/SecondaryButton";
 
 const HeroSection = () => {
+  const router = useRouter();
+
   return (
     <section className={styles.heroSection}>
       <Image
@@ -79,7 +82,7 @@ const HeroSection = () => {
                 /> */}
                 <SecondaryButton
                   label="Explore the Platform"
-                  onClick={() => console.log("Secondary clicked")}
+                  onClick={() => router.push("/contact-us")}
                   className={styles.secondaryButton}
                 />
               </div>

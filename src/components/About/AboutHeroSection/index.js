@@ -2,8 +2,12 @@ import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import PrimaryButton from "../../Shared/PrimaryButton";
+import { useRouter } from "next/router";
 
 const AboutHeroSection = () => {
+
+  const router = useRouter();
+
   return (
     <section className={styles.aboutHeroSection}>
       <div className={styles.aboutHeroLayover}></div>
@@ -40,12 +44,7 @@ const AboutHeroSection = () => {
           <PrimaryButton
             label="Explore Sia "
             arrowColor="#021C2F"
-            onClick={() => {
-              const contactSection = document.getElementById('contact-section');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            }}
+            onClick={() => router.push("/contact-us")}
             className={styles.primaryButton}
             />
           </motion.div>
@@ -187,146 +186,146 @@ const AboutHeroSection = () => {
         </div>
 
         {/* Bento Grid 
-        <div className={styles.bentoGrid}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className={`${styles.gridItem} ${styles.item1}`}
-          >
-            <div className={styles.valueCard}>
-              <span className={styles.valueText}>Adaptive</span>
-            </div>
-          </motion.div>
+          <div className={styles.bentoGrid}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className={`${styles.gridItem} ${styles.item1}`}
+            >
+              <div className={styles.valueCard}>
+                <span className={styles.valueText}>Adaptive</span>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className={`${styles.gridItem} ${styles.item2}`}
-          >
-            <Image
-              src="/images/about-team-1.jpg"
-              alt="Team collaboration"
-              fill
-              className={styles.gridImage}
-            />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className={`${styles.gridItem} ${styles.item2}`}
+            >
+              <Image
+                src="/images/about-team-1.jpg"
+                alt="Team collaboration"
+                fill
+                className={styles.gridImage}
+              />
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className={`${styles.gridItem} ${styles.item3}`}
-          >
-            <Image
-              src="/images/about-team-2.jpg"
-              alt="Office environment"
-              fill
-              className={styles.gridImage}
-            />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className={`${styles.gridItem} ${styles.item3}`}
+            >
+              <Image
+                src="/images/about-team-2.jpg"
+                alt="Office environment"
+                fill
+                className={styles.gridImage}
+              />
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className={`${styles.gridItem} ${styles.item4}`}
-          >
-            <div className={styles.statCard}>
-              <div className={styles.statNumber}>2500+</div>
-              <div className={styles.statLabel}>Lorem ipsum dolor sit ame</div>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className={`${styles.gridItem} ${styles.item4}`}
+            >
+              <div className={styles.statCard}>
+                <div className={styles.statNumber}>2500+</div>
+                <div className={styles.statLabel}>Lorem ipsum dolor sit ame</div>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className={`${styles.gridItem} ${styles.item5}`}
-          >
-            <div className={styles.valueCard}>
-              <span className={styles.valueText}>Understanding</span>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className={`${styles.gridItem} ${styles.item5}`}
+            >
+              <div className={styles.valueCard}>
+                <span className={styles.valueText}>Understanding</span>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className={`${styles.gridItem} ${styles.item6}`}
-          >
-            <div className={styles.statCard}>
-              <div className={styles.statNumber}>52+</div>
-              <div className={styles.statLabel}>Lorem ipsum dolor sit</div>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className={`${styles.gridItem} ${styles.item6}`}
+            >
+              <div className={styles.statCard}>
+                <div className={styles.statNumber}>52+</div>
+                <div className={styles.statLabel}>Lorem ipsum dolor sit</div>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            className={`${styles.gridItem} ${styles.item7}`}
-          >
-            <div className={styles.valueCard}>
-              <span className={styles.valueText}>Compassion</span>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className={`${styles.gridItem} ${styles.item7}`}
+            >
+              <div className={styles.valueCard}>
+                <span className={styles.valueText}>Compassion</span>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className={`${styles.gridItem} ${styles.item8}`}
-          >
-            <Image
-              src="/images/about-team-3.jpg"
-              alt="Team meeting"
-              fill
-              className={styles.gridImage}
-            />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+              className={`${styles.gridItem} ${styles.item8}`}
+            >
+              <Image
+                src="/images/about-team-3.jpg"
+                alt="Team meeting"
+                fill
+                className={styles.gridImage}
+              />
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className={`${styles.gridItem} ${styles.item9}`}
-          >
-            <Image
-              src="/images/about-team-4.jpg"
-              alt="Collaborative workspace"
-              fill
-              className={styles.gridImage}
-            />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className={`${styles.gridItem} ${styles.item9}`}
+            >
+              <Image
+                src="/images/about-team-4.jpg"
+                alt="Collaborative workspace"
+                fill
+                className={styles.gridImage}
+              />
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
-            className={`${styles.gridItem} ${styles.item10}`}
-          >
-            <Image
-              src="/images/about-team-5.jpg"
-              alt="Office space"
-              fill
-              className={styles.gridImage}
-            />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.3 }}
+              className={`${styles.gridItem} ${styles.item10}`}
+            >
+              <Image
+                src="/images/about-team-5.jpg"
+                alt="Office space"
+                fill
+                className={styles.gridImage}
+              />
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-            className={`${styles.gridItem} ${styles.item11}`}
-          >
-            <div className={styles.statCard}>
-              <div className={styles.statNumber}>96%</div>
-              <div className={styles.statLabel}>Lorem ipsum</div>
-            </div>
-          </motion.div>
-        </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
+              className={`${styles.gridItem} ${styles.item11}`}
+            >
+              <div className={styles.statCard}>
+                <div className={styles.statNumber}>96%</div>
+                <div className={styles.statLabel}>Lorem ipsum</div>
+              </div>
+            </motion.div>
+          </div>
         */}
 
       </div>

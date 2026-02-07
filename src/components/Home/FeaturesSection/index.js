@@ -77,7 +77,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.4 }}
           className={styles.topTag}
         >
-          Proven across industries
+          Proven Across Industries
         </motion.div>
 
         {/* Main Heading */}

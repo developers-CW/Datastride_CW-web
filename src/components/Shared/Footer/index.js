@@ -73,7 +73,7 @@ const Footer = () => {
 
                 <PrimaryButton
                   label="Request a Demo"
-                  onClick={() => router.push("#contact-section")}
+                  onClick={() => router.push("/contact-us")}
                   backgroundColor="#0C8CE9"
                   arrowColor="#0C8CE9"
                   className={styles.primaryCta}

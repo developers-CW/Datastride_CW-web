@@ -4,23 +4,23 @@ import styles from "./styles.module.scss";
 const AboutStatsSection = () => {
   const stats = [
     {
-      number: "25+",
-      label: "AI Agents",
+      number: "35%",
+      label: "Faster ROI",
       delay: 0.2,
     },
     {
-      number: "50+",
-      label: "Enterprise Deployments",
+      number: "6x",
+      label: "Insight Velocity",
       delay: 0.3,
+    },
+    {
+      number: "25+",
+      label: "AI Agents",
+      delay: 0.4,
     },
     {
       number: "4000+",
       label: "Hours Saved",
-      delay: 0.4,
-    },
-    {
-      number: "35%",
-      label: "Faster ROI",
       delay: 0.5,
     },
   ];
