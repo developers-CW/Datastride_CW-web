@@ -1,0 +1,350 @@
+@import '../../../styles/base';
+
+.contactSection {
+  padding: $spacing-10xl 0;
+
+  position: relative;
+  overflow: hidden;
+  @include mobile {
+    padding: 50px 16px;
+  }
+}
+
+.container {
+  max-width: $container-max-width-desktop;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-6xl;
+  }
+}
+
+// Left Content Styles
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 20px;
+}
+
+.heading {
+  color: #0E0E0E;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: $font-secondary;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.phoneIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.phoneNumber {
+  color: #0E0E0E;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: $font-secondary;
+}
+
+.description {
+  color: #696969;
+  font-family: $font-secondary;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 177.778% */
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-lg;
+  padding: $spacing-xl $spacing-3xl;
+  background: $brand-500;
+  color: $base-white;
+  border: none;
+  border-radius: $radius-full;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+
+  &:hover {
+    background: $brand-600;
+  }
+}
+
+.secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  color: #3B82F6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+  text-decoration: underline;
+
+  &:hover {
+    color: #2563EB;
+    text-decoration: underline;
+  }
+}
+
+.linkArrow {
+  font-size: 0.875rem;
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+}
+
+.iconCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: $brand-600;
+  color: $base-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+// Right Content - Form Styles
+.rightContent {
+  width: 100%;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #D1D5DB;
+  border-radius: 12px;
+  background: $base-white;
+  color: #0E0E0E;
+  font-size: 16px;
+  font-family: $font-secondary;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: #9CA3AF;
+    font-weight: 400;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  }
+}
+
+.formSelect {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right $spacing-xl center;
+  background-size: 12px;
+  padding-right: $spacing-5xl;
+  cursor: pointer;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 140px;
+  font-family: $font-secondary;
+  line-height: 1.5;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: -8px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #3B82F6;
+  border-radius: 4px;
+  background: #3B82F6;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+  appearance: none;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:checked {
+    background: #3B82F6;
+    border-color: #3B82F6;
+
+    &::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $base-white;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+
+  &:not(:checked) {
+    background: $base-white;
+  }
+
+  &:hover {
+    border-color: #2563EB;
+  }
+}
+
+.checkboxLabel {
+  color: #0E0E0E;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+}
+
+.highlightedText {
+  color: #3B82F6;
+  font-weight: 600;
+}
+
+.termsText {
+  color: #0E0E0E;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+}
+
+.termsLink {
+  color: #0E0E0E;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-lg;
+  padding: $spacing-xl $spacing-3xl;
+  background: $brand-500;
+  color: $base-white;
+  border: none;
+  border-radius: $radius-full;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+
+  &:hover {
+    background: $brand-600;
+  }
+}
+
+.successMessage {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #166534;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  .messageIcon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.errorMessage {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  .messageIcon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  }
+}

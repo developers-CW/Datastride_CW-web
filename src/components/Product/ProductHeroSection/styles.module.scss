@@ -1,0 +1,226 @@
+@import "../../../styles/base";
+
+.heroSection {
+  padding: $spacing-10xl 0;
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+  position: relative;
+
+  @include mobile {
+    padding: $spacing-7xl 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+// Content Wrapper
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  // margin-bottom: $spacing-8xl;
+
+  // @include mobile {
+  //   margin-bottom: $spacing-6xl;
+  // }
+}
+
+// Main Heading
+.mainHeading {
+  font-family: $font-secondary;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #4a4a4a;
+  max-width: 800px;
+  padding-top: $spacing-7xl;
+  margin: 0 auto;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+}
+
+// Description
+.description {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #696969;
+  max-width: 700px;
+  margin: $spacing-3xl auto 0;
+
+  @include mobile {
+    font-size: 16px;
+    margin-top: $spacing-2xl;
+  }
+}
+
+// CTA Button
+.ctaButton {
+  margin-top: $spacing-4xl;
+  padding: 4px 4px 4px 12px;
+  background: #0C8CE9;
+  color: $base-white;
+  border: none;
+  border-radius: 50px;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-md;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(46, 16, 101, 0.2);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(46, 16, 101, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include mobile {
+    padding: 14px 28px;
+    font-size: 14px;
+    margin-top: $spacing-3xl;
+  }
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+
+  .ctaButton:hover & {
+    transform: translateX(4px);
+  }
+}
+
+// Rating Badge
+.ratingBadge {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-top: $spacing-3xl;
+
+  @include mobile {
+    margin-top: $spacing-2xl;
+  }
+}
+
+.starIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.ratingText {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  color: #696969;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+// Trust Section
+.trustSection {
+  padding-top: $spacing-6xl;
+  border-top: 1px solid #e5e7eb;
+
+  @include mobile {
+    padding-top: $spacing-4xl;
+  }
+}
+
+.trustHeading {
+  font-family: $font-secondary;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0E0E0E;
+  text-align: center;
+  margin: 0 0 $spacing-5xl 0;
+
+  @include tablet {
+    font-size: 24px;
+    margin-bottom: $spacing-4xl;
+  }
+
+  @include mobile {
+    font-size: 20px;
+    margin-bottom: $spacing-3xl;
+  }
+}
+
+// Brands Grid
+.brandsGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: $spacing-4xl;
+  align-items: center;
+  justify-items: center;
+
+  @include laptop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-3xl;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-2xl;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-2xl;
+  }
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  @include mobile {
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.logoImage {
+  width: auto;
+  height: auto;
+  max-width: 120px;
+  max-height: 40px;
+  object-fit: contain;
+
+  @include mobile {
+    max-width: 100px;
+    max-height: 35px;
+  }
+}

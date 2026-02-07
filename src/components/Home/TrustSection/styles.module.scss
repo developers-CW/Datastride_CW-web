@@ -1,0 +1,130 @@
+@import "../../../styles/base";
+
+.trustSection {
+  padding: $spacing-5xl 0;
+  position: relative;
+  overflow: hidden;
+
+  @include mobile {
+    padding: 50px 16px;
+  }
+}
+
+.container {
+  max-width: $container-max-width-desktop;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overlay1 {
+  position: absolute;
+  left: -79px;
+  top: -41.676px;
+  width: 498px;
+  height: 498px;
+  border-radius: 498px;
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgba(132, 203, 255, 0.15) 0%,
+      rgba(126, 255, 160, 0.5) 100%);
+  filter: blur(109.05110168457031px);
+}
+
+.overlay2 {
+  width: 498px;
+  height: 498px;
+  position: absolute;
+  right: -74px;
+  bottom: -115.324px;
+  border-radius: 498px;
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgba(126, 255, 160, 0.1) 0%,
+      rgba(132, 203, 255, 0.5) 100%);
+  filter: blur(109.05110168457031px);
+}
+
+// Shield Icon Styles
+.trustHeader {
+  width: 72px;
+  height: 72px;
+}
+
+
+.taglineText {
+
+  display: inline-flex;
+  color: #005AD1;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  /* 112.5% */
+}
+
+// Headline Styles
+.headline {
+  color: #000;
+  text-align: center;
+  font-family: $font-secondary;
+  font-size: 32px;
+  line-height: 1.2;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.44px;
+  margin: 16px auto 0;
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+.headlineSecond {
+  color: $green-600;
+}
+
+// Features Grid Styles
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-8xl;
+  max-width: 1200px;
+  margin: $spacing-6xl auto 0 auto;
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 56px;
+    column-gap: 40px;
+  }
+}
+
+// Feature Card Styles
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-3xl;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-sm;
+}
+
+.featureText {
+  color: #000;
+  font-family: $font-secondary;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25.06px;
+  letter-spacing: 0%;
+}
+.primaryButton{
+
+  margin: 43px auto 0 auto;
+
+
+}

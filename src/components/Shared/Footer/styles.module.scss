@@ -1,0 +1,356 @@
+@import "../../../styles/base";
+
+.footer {
+  padding: 80px 0 40px 0;
+  background: #e0f2fe;
+  position: relative;
+  overflow: hidden;
+
+  @include mobile {
+    padding: 50px 16px;
+  }
+}
+
+.footerBackgroundGradient {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+
+}
+
+.container {
+  max-width: $container-max-width-desktop;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: none;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-6xl;
+  }
+}
+
+// Footer Navigation Styles
+.footerNavigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-4xl;
+  }
+}
+
+.navColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.navTitle {
+  color: #1f2937;
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: $font-secondary;
+  margin-bottom: 16px;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.8;
+  transition: color 0.3s ease;
+  font-family: $font-secondary;
+  font-weight: 400;
+
+  &:hover {
+    color: #1f2937;
+  }
+}
+
+// Newsletter Section Styles
+.newsletterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.newsletterTitle {
+  color: #1f2937;
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: $font-secondary;
+}
+
+.newsletterDescription {
+  color: #6b7280;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $font-secondary;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 50px;
+  background: $base-white;
+  color: #1f2937;
+  font-size: 14px;
+  font-family: $font-secondary;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  }
+}
+
+.submitButton {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #312e81;
+  color: $base-white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background: #1e1b4b;
+  }
+}
+
+// CTA Section at top
+.ctaSection {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 160px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.ctaBadge {
+  display: inline-block;
+  color: #005AD1;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 112.5% */
+}
+
+.ctaHeading {
+  font-family: $font-secondary;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #021C2F;
+  margin: 0 0;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+.ctaDescription {
+  color: #6b7280;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 16px;
+  font-family: $font-secondary;
+}
+
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-lg;
+  padding: $spacing-lg $spacing-2xl;
+  background: $indigo-900;
+  color: $base-white;
+  border: none;
+  border-radius: $radius-full;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  align-self: flex-start;
+  margin: 0 auto !important;
+
+  &:hover {
+    background: $indigo-800;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.ctaButtonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba($base-white, 0.2);
+  font-size: 1rem;
+}
+
+.ctaImagePlaceholder {
+  width: 100%;
+  height: 380px;
+  background: $base-white;
+
+  box-shadow: 0 10px 40px rgba($indigo-900, 0.08);
+
+  @media (max-width: 768px) {
+    height: 280px;
+  }
+}
+
+// Bottom Bar Styles
+.bottomBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.bottomText {
+  color: #4b5563;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: $font-secondary;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 80px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $spacing-md;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.bottomLink {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: $font-secondary;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #1f2937;
+  }
+}
+
+.scrollToTop {
+  position: absolute;
+  right: 50%;
+  margin-bottom: 5rem;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #312e81;
+  color: $base-white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #1e1b4b;
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    position: static;
+    margin: $spacing-lg auto 0;
+    transform: none;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

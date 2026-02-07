@@ -1,0 +1,153 @@
+@import "../../../styles/base";
+
+.mobileCardsWrapper {
+  display: none;
+
+  @include mobile {
+    display: block;
+    margin-top: $spacing-7xl;
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+// Slider Styles
+.slider {
+  // Dots styling
+  :global(.slick-dots) {
+    bottom: 0px;
+    margin-top: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-lg;
+    position: relative;
+  }
+
+  :global(.slick-dots li) {
+    width: 27px;
+    height: 27px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.slick-dots li button) {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border-radius: 50%;
+    background: #696969;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background: #6b7280;
+    }
+  }
+
+  :global(.slick-dots li.slick-active button) {
+    width: 27px;
+    height: 27px;
+    background: transparent;
+    border: 1px solid #0e0e0e;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background: #0e0e0e;
+      border-radius: 50%;
+    }
+  }
+}
+
+// Slide wrapper
+.slide {
+  outline: none;
+  padding: 0;
+}
+
+// Card Styles
+.card {
+  position: relative;
+  background: linear-gradient(146deg, #fff 10.53%, #f0f8f0 101.52%);
+  padding: $spacing-7xl $spacing-5xl;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(32, 11, 86, 0.07);
+  border-radius: $radius-2xl;
+  min-height: 350px;
+  width: 100%;
+  height: 100%;
+
+  &.expanded {
+    justify-content: space-between;
+    padding-top: 100px; // Space for number badge
+  }
+}
+
+// Number Badge Styles
+.numberBadge {
+  position: absolute;
+  top: $spacing-5xl;
+  left: $spacing-5xl;
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(32, 11, 86, 0.07);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $base-white;
+  z-index: 3;
+}
+
+.number {
+  color: rgba(32, 11, 86, 1);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+// Card Title Styles
+.cardTitle {
+  color: $indigo-900;
+  margin: 0;
+  line-height: 1.3;
+  padding-right: $spacing-3xl;
+  word-wrap: break-word;
+  hyphens: auto;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+// Description Container Styles
+.descriptionContainer {
+  white-space: normal;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-top: auto; // Pushes description to bottom
+  opacity: 1; // Always visible in mobile
+}
+
+.cardDescription {
+  color: $gray-600;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: $spacing-lg;
+}

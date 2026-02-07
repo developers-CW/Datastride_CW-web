@@ -1,0 +1,251 @@
+@import "../../../styles/base";
+
+.featuresSection {
+  padding: $spacing-10xl 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+
+  @include mobile {
+    padding: $spacing-7xl 0;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+// Top Section - Features
+.topSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $spacing-10xl;
+
+  @include mobile {
+    margin-bottom: $spacing-7xl;
+  }
+}
+
+.mainHeading {
+  font-family: $font-secondary;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #4a4a4a;
+  text-align: center;
+  margin: 0 0 $spacing-3xl 0;
+
+  @include mobile {
+    font-size: 32px;
+    margin-bottom: $spacing-2xl;
+  }
+}
+
+// CTA Button
+.ctaButton {
+  padding: 16px 32px;
+  background: #2e1065;
+  color: $base-white;
+  border: none;
+  border-radius: 50px;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-md;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(46, 16, 101, 0.2);
+  margin-bottom: $spacing-7xl;
+
+  &:hover {
+    background: #3d1a7a;
+    box-shadow: 0 8px 25px rgba(46, 16, 101, 0.3);
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+
+  @include mobile {
+    padding: 14px 28px;
+    font-size: 14px;
+    margin-bottom: $spacing-5xl;
+  }
+}
+
+// Features Grid
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-3xl;
+  width: 100%;
+
+  @include laptop {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-2xl;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+}
+
+.featureCard {
+  background: $base-white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: $spacing-4xl;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+  }
+
+  @include mobile {
+    padding: $spacing-3xl;
+  }
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.featureTitle {
+  font-family: $font-secondary;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #4a4a4a;
+  margin: 0;
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.featureDescription {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #6b7280;
+  margin: 0;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+// Impact Section
+.impactSection {
+  padding-top: $spacing-8xl;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+
+  @include mobile {
+    padding-top: $spacing-6xl;
+  }
+}
+
+.impactHeading {
+  font-family: $font-secondary;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #4a4a4a;
+  margin: 0 0 $spacing-6xl 0;
+
+  @include tablet {
+    font-size: 32px;
+  }
+
+  @include mobile {
+    font-size: 24px;
+    margin-bottom: $spacing-4xl;
+  }
+}
+
+.proudText {
+  color: #4a4a4a;
+  font-weight: 700;
+}
+
+// Stats Grid
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-5xl;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-4xl;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-4xl;
+  }
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.statNumber {
+  font-family: $font-secondary;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: #3b82f6;
+  letter-spacing: -0.02em;
+
+  @include tablet {
+    font-size: 48px;
+  }
+
+  @include mobile {
+    font-size: 40px;
+  }
+}
+
+.statLabel {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #0E0E0E;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}

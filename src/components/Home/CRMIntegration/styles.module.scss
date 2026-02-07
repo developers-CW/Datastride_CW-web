@@ -1,0 +1,59 @@
+@import '../../../styles/base';
+
+.crmIntegrationSection {
+  padding: $spacing-7xl 0;
+
+  @include mobile {
+    padding: 50px 16px;
+  }
+}
+
+.container {
+  max-width: $container-max-width-desktop;
+  margin: 0 auto;
+}
+
+.contentWrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subtitle {
+    color: #005AD1;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+
+    /* 112.5% */
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  .title {
+    font-family: $font-secondary;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.48px;
+    margin-top: 16px;
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+}
+
+.integrationImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 50px;
+}

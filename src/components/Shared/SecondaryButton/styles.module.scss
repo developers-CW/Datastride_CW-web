@@ -1,0 +1,67 @@
+@import '../../../styles/base';
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2xl;
+  padding: $spacing-sm $spacing-sm $spacing-sm $spacing-xl;
+  border: 2px solid;
+  border-radius: $radius-full;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: $font-secondary;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.buttonLabel {
+  white-space: nowrap;
+}
+
+.buttonIconContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+
+  .secondaryButton:hover:not(:disabled) & {
+    transform: translateX(2px);
+  }
+}
+
+.buttonIcon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.fullWidth {
+  width: 100%;
+  justify-content: space-between;
+}
+

@@ -1,0 +1,582 @@
+@import "../../../styles/base";
+
+.aboutHeroSection {
+  padding: $spacing-7xl 0 $spacing-8xl 0;
+  background: $base-white;
+  position: relative;
+  overflow: hidden;
+
+  @include mobile {
+    padding: $spacing-6xl 0 $spacing-7xl 0;
+  }
+}
+
+.aboutHeroLayover {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  border-radius: 100vw;
+  opacity: 0.3;
+  background: linear-gradient(to bottom right, #C8E5FF 0%, #E1FFDC 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #C8E5FF 0%, #E1FFDC 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #C8E5FF 0%, #E1FFDC 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #C8E5FF 0%, #E1FFDC 50%) top right / 50% 50% no-repeat;
+  box-shadow: 0 0 22.923px 0 rgba(0, 0, 0, 0.16) inset, 5.731px 8.596px 22.923px 0 rgba(0, 0, 0, 0.16);
+  filter: blur(100px);
+  top: -50vw;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+
+  @include laptop {
+    padding: 0 16px;
+  }
+}
+
+// Top Content Styles
+.topContent {
+  text-align: center;
+  margin-bottom: $spacing-7xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    margin-bottom: $spacing-6xl;
+  }
+}
+
+.mainHeading {
+  font-family: $font-secondary;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #0E0E0E;
+  max-width: 660px;
+  padding-top: $spacing-10xl;
+  margin: 0 auto;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+}
+
+.highlight {
+  color: $success-500;
+  position: relative;
+}
+
+.subtitle {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #696969;
+  max-width: 660px;
+  margin: $spacing-3xl auto 0;
+
+  @include mobile {
+    font-size: 16px;
+    margin-top: $spacing-2xl;
+  }
+}
+
+.btnWrapper {
+  margin-top: $spacing-4xl;
+}
+
+.primaryButton {
+  min-width: 195px;
+}
+
+.ctaButton {
+  margin-top: $spacing-4xl;
+  padding: 14px 28px;
+  background: #2e1065;
+  color: $base-white;
+  border: none;
+  border-radius: 50px;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-md;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #3d1a7a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 16, 101, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include mobile {
+    padding: 12px 24px;
+    font-size: 14px;
+    margin-top: $spacing-3xl;
+  }
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+
+  .ctaButton:hover & {
+    transform: translateX(4px);
+  }
+}
+
+// Bento Grid Styles
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: $spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: $spacing-lg;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: $spacing-md;
+  }
+}
+
+.gridItem {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Grid Layout - Desktop
+.item1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  @include tablet {
+    grid-column: 1 / 2;
+    grid-row: auto;
+    min-height: 180px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+  }
+}
+
+.item2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+
+  @include tablet {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    min-height: 380px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+    min-height: 250px;
+  }
+}
+
+.item3 {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+
+  @include tablet {
+    grid-column: 1 / 3;
+    grid-row: auto;
+    min-height: 200px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+    min-height: 200px;
+  }
+}
+
+.item4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+  @include tablet {
+    grid-column: 1 / 2;
+    grid-row: auto;
+    min-height: 180px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+  }
+}
+
+.item5 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+
+  @include tablet {
+    grid-column: 2 / 3;
+    grid-row: auto;
+    min-height: 180px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+  }
+}
+
+.item6 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+
+  @include tablet {
+    grid-column: 1 / 2;
+    grid-row: auto;
+    min-height: 180px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+  }
+}
+
+.item7 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+
+  @include tablet {
+    grid-column: 2 / 3;
+    grid-row: auto;
+    min-height: 180px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+  }
+}
+
+.item8 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+
+  @include tablet {
+    grid-column: 1 / 2;
+    grid-row: auto;
+    min-height: 200px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+    min-height: 200px;
+  }
+}
+
+.item9 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+
+  @include tablet {
+    grid-column: 2 / 3;
+    grid-row: auto;
+    min-height: 200px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+    min-height: 200px;
+  }
+}
+
+.item10 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+
+  @include tablet {
+    grid-column: 1 / 3;
+    grid-row: auto;
+    min-height: 200px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+    min-height: 200px;
+  }
+}
+
+.item11 {
+  display: none; // Hidden in original layout, can be shown if needed
+
+  @include tablet {
+    display: block;
+    grid-column: 1 / 2;
+    grid-row: auto;
+    min-height: 180px;
+  }
+
+  @include mobile {
+    grid-column: 1;
+  }
+}
+
+// Image Styles
+.gridImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+// Value Card Styles
+.valueCard {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-2xl;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+  }
+}
+
+.valueText {
+  font-family: $font-secondary;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #0e7490;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+// Stat Card Styles
+.statCard {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-3xl;
+  gap: $spacing-sm;
+}
+
+.statNumber {
+  font-family: $font-secondary;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: $base-white;
+
+  @include mobile {
+    font-size: 40px;
+  }
+}
+
+.statLabel {
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 200px;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+.bentoFacts {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.bentoCol {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.bentoPill {
+  font-family: $font-secondary;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  height: 60px;
+  padding: $spacing-2xl;
+  text-align: center;
+  color: $base-white;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #108FE2 0%, #CCEBFF 100%);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.16), inset 0px 0px 8px rgba(0, 0, 0, 0.16);
+
+  @include laptop {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.bentoImg {
+  position: relative;
+  width: 100%;
+  height: 216px;
+  border-radius: 8px;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.16), inset 0px 0px 8px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+
+  @include tablet {
+    height: auto;
+    aspect-ratio: 198 / 216;
+  }
+  
+  img {
+    object-fit: cover;
+  }
+}
+
+.bentoStat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $font-secondary;
+  font-weight: 500;
+  min-height: 134px;
+  padding: 16px 22px;
+  background: linear-gradient(128.3deg, #E7F7E9 3.1%, #2CACAA 100%);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.16), inset 0px 0px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  color: $base-white;
+}
+
+.bentoStatAlt {
+  background: linear-gradient(308.3deg, #0C8CE9 0%, #2CACAA 96.9%);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.16), inset 0px 0px 8px rgba(0, 0, 0, 0.16);
+}
+
+.bentoNum {
+  font-size: 42px;
+  line-height: 55px;
+}
+
+.bentoTitle {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+// Responsive breakpoints
+@media (max-width: 991px) {
+  .bentoFacts {
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+
+  .bentoCol {
+    flex: 1 0 calc(33.33% - 13px);
+    max-width: calc(33.33% - 13px);
+
+    &:nth-child(5) {
+      .bentoPill {
+        order: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gridItem {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    min-height: 200px;
+  }
+
+  .item11 {
+    display: block;
+  }
+  
+  .bentoFacts {
+    row-gap: 19px;
+    padding: 0;
+    gap: 16px;
+  }
+
+  .bentoCol {
+    flex: 1 0 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+    gap: 16px;
+
+    &:first-child {
+      .bentoPill {
+        order: 1;
+      }
+    }
+
+    &:nth-child(3) {
+      .bentoPill {
+        order: 1;
+      }
+    }
+
+    &:nth-child(4) {
+      .bentoStat {
+        order: 1;
+      }
+    }
+  }
+
+  .bentoStat {
+    min-height: 0;
+    padding: $spacing-md;
+    background: linear-gradient(128.3deg, #79c282 3.1%, #2cacaa 100%);
+
+    &.bentoStatAlt {
+      background: linear-gradient(308.3deg, #0c8ce9 0%, #2cacaa 96.9%);
+    }
+  }
+
+  .bentoNum {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}

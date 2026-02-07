@@ -1,0 +1,281 @@
+@import "../../../styles/base";
+
+.navbar {
+  position: fixed;
+  top: $spacing-2xl;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 $spacing-4xl;
+  transition: background 0.3s ease;
+
+  @include tablet {
+    padding: 0 $spacing-3xl;
+  }
+
+  @include mobile {
+    padding: 0 !important;
+    top: 0;
+  }
+
+}
+
+.navContainer {
+  max-width: $container-max-width-desktop;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-4xl;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    padding: $spacing-2xl $spacing-3xl;
+  }
+
+  @include mobile {
+    padding: $spacing-xl $spacing-2xl;
+    border-radius: 0;
+  }
+}
+
+.logo {
+  min-width: 150px;
+  margin-left: 1rem;
+  img{
+    width: 130px;
+    height: 60px;
+    object-fit: contain;
+  }
+}
+
+// Navigation Links Styles
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    gap: $spacing-3xl;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  color: #200B56;
+  text-align: center;
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: $spacing-xs;
+
+  &:hover {
+    color: $indigo-900;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $brand-500;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  // Active state (for the current page)
+  &.active {
+    color: $indigo-900;
+    border-bottom: 1px solid rgba(32, 11, 86, 0.65);
+    ;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+}
+
+// CTA Button Styles
+.ctaButton {
+  flex-shrink: 0;
+  min-width: 150px;
+
+  .contactButton {
+    // border: 1px solid #200B56;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+// Mobile Menu Toggle
+.mobileMenuToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-sm;
+  z-index: 1001;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: $indigo-900;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  &:hover span {
+    background: $brand-500;
+  }
+
+  // Hamburger to X animation
+  &.open {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+// Mobile Menu Styles (for future implementation)
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  padding: 100px $spacing-4xl $spacing-4xl;
+
+  .mobileMenuClose {
+    position: absolute;
+    top: $spacing-3xl;
+    right: $spacing-3xl;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-sm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $indigo-900;
+    transition: all 0.3s ease;
+    z-index: 1000;
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    &:hover {
+      color: $brand-500;
+      transform: rotate(90deg);
+    }
+
+    @media (max-width: 768px) {
+      top: $spacing-2xl;
+      right: $spacing-2xl;
+    }
+  }
+
+  .mobileNavLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-3xl;
+
+    .mobileNavItem {
+      .mobileNavLink {
+        font-size: 24px;
+        font-weight: 600;
+        color: $indigo-900;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+
+        &:hover {
+          color: $brand-500;
+        }
+      }
+    }
+  }
+
+  .mobileCta {
+    margin-top: $spacing-5xl;
+  }
+
+  @media (max-width: 768px) {
+    &.open {
+      display: block;
+    }
+  }
+}
+
+// Scrolled State
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  padding: $spacing-xl 0;
+}
+
+// Responsive adjustments
+@media (max-width: 1200px) {
+  .navLinks {
+    gap: $spacing-2xl;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: $spacing-xl 0;
+  }
+}

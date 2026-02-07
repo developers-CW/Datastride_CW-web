@@ -1,0 +1,23 @@
+@import "../base";
+
+.privacyPolicy{
+    padding: $spacing-10xl 0;
+    background: linear-gradient(180deg, #EEF9FF 0%, #F9F7F6 18.78%);
+}
+.title{
+    font-size: 48px;
+    font-weight: 700;
+    font-family: $font-secondary;
+    color: #000000;
+    text-align: center;
+    padding:  $spacing-6xl 0;
+}
+.content{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $font-secondary;
+    color: #000000;
+    text-align: center;
+    padding: 0 $spacing-6xl;
+    margin-top: $spacing-6xl;
+}

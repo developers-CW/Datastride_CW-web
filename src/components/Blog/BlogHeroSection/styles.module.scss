@@ -1,0 +1,387 @@
+@import "../../../styles/base";
+
+.heroSection {
+  padding: $spacing-10xl 0;
+  background: linear-gradient(180deg, #f0f4f8 0%, #ffffff 100%);
+
+  @include mobile {
+    padding: $spacing-7xl 0;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+// Header Content
+.headerContent {
+  text-align: center;
+  margin-bottom: $spacing-7xl;
+
+  @include mobile {
+    margin-bottom: $spacing-5xl;
+  }
+}
+
+.mainHeading {
+  font-family: $font-secondary;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #4a4a4a;
+  margin: 0 0 $spacing-xl 0;
+
+  @include tablet {
+    font-size: 44px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+}
+
+.description {
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto $spacing-5xl;
+
+  @include mobile {
+    font-size: 16px;
+    margin-bottom: $spacing-4xl;
+  }
+}
+
+// Email Form
+.emailForm {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  background: $base-white;
+  border-radius: 50px;
+  padding: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  @include mobile {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 12px;
+    gap: $spacing-sm;
+  }
+}
+
+.emailInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  font-family: $font-primary;
+  font-size: 16px;
+  color: #4a4a4a;
+  background: transparent;
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 12px 16px;
+  }
+}
+
+.signupButton {
+  padding: 12px 28px;
+  background: #2e1065;
+  color: $base-white;
+  border: none;
+  border-radius: 50px;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: #3d1a7a;
+    transform: scale(1.05);
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+  }
+}
+
+// Filter Section
+.filterSection {
+  margin-bottom: $spacing-7xl;
+
+  @include mobile {
+    margin-bottom: $spacing-5xl;
+  }
+}
+
+.filterLabel {
+  font-family: $font-secondary;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #4a4a4a;
+  margin: 0 0 $spacing-2xl 0;
+  text-align: center;
+
+  @include mobile {
+    font-size: 18px;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.filterTags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-md;
+
+  @include mobile {
+    gap: $spacing-sm;
+  }
+}
+
+.filterTag {
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: none;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  background: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #d1d5db;
+    transform: translateY(-2px);
+  }
+
+  &.active {
+    background: #3b82f6;
+    color: $base-white;
+  }
+
+  @include mobile {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+// Blog Grid
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 400px);
+  gap: $spacing-3xl;
+
+  @include tablet {
+    grid-template-rows: repeat(3, 350px);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: $spacing-2xl;
+  }
+}
+
+// Blog Card
+.blogCard {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    .overlay {
+      opacity: 0.7;
+    }
+
+    .postImage {
+      transform: scale(1.05);
+    }
+  }
+
+  &.large {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+    @include tablet {
+      grid-row: 1 / 3;
+    }
+
+    @include mobile {
+      grid-column: 1;
+      grid-row: auto;
+      min-height: 400px;
+    }
+  }
+
+  &.medium {
+    grid-column: 2 / 3;
+    grid-row: span 1;
+
+    @include mobile {
+      grid-column: 1;
+      min-height: 300px;
+    }
+  }
+
+  @include mobile {
+    border-radius: 20px;
+  }
+}
+
+.cardImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.postImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  transition: opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  padding: $spacing-4xl;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: $spacing-md;
+
+  @include mobile {
+    padding: $spacing-3xl;
+  }
+}
+
+.categoryBadge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  font-family: $font-primary;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a4a4a;
+  align-self: flex-start;
+  text-transform: capitalize;
+}
+
+.cardTitle {
+  font-family: $font-secondary;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: $base-white;
+  margin: 0;
+
+  .large & {
+    font-size: 32px;
+  }
+
+  @include mobile {
+    font-size: 24px;
+
+    .large & {
+      font-size: 28px;
+    }
+  }
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  font-family: $font-primary;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+
+  @include mobile {
+    font-size: 13px;
+  }
+}
+
+.authorAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid $base-white;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include mobile {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.authorName {
+  font-weight: 500;
+}
+
+.dot {
+  opacity: 0.7;
+}
+
+.date {
+  opacity: 0.9;
+}

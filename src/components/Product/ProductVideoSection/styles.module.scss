@@ -1,0 +1,139 @@
+@import "../../../styles/base";
+
+.videoSection {
+  padding: $spacing-10xl 0;
+  background: $base-white;
+
+  @include mobile {
+    padding: $spacing-7xl 0;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+// Section Heading
+.sectionHeading {
+  font-family: $font-secondary;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0E0E0E;
+  text-align: center;
+  margin: 0 0 $spacing-7xl 0;
+
+  @include tablet {
+    font-size: 40px;
+    margin-bottom: $spacing-6xl;
+  }
+
+  @include mobile {
+    font-size: 32px;
+    margin-bottom: $spacing-5xl;
+  }
+}
+
+// Video Container with Gradient Border
+.videoContainer {
+  position: relative;
+  padding: 4px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #14b8a6 0%, #84cc16 100%);
+  box-shadow: 0 10px 40px rgba(20, 184, 166, 0.2);
+
+  @include mobile {
+    border-radius: 24px;
+    padding: 3px;
+  }
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    border-radius: 21px;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.videoPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Play Button
+.playButton {
+  position: relative;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #bae6fd 0%, #93c5fd 100%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @include mobile {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.playIconWrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(132, 204, 22, 0.3);
+
+  @include mobile {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.playIcon {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+
+  @include mobile {
+    width: 24px;
+    height: 24px;
+    margin-left: 3px;
+  }
+}

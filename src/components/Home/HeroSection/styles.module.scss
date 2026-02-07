@@ -1,0 +1,824 @@
+@import "../../../styles/base";
+
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: $spacing-10xl 0 $spacing-7xl 0;
+  background: linear-gradient(180deg, rgba(191, 255, 208, 0.1), #f9f7f6);
+
+  position: relative;
+  overflow: hidden;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 1440px;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-7xl;
+  // align-items: center;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-6xl;
+  }
+}
+
+.checkedBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100vh;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.bgHeroGrade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+// Marketing Content Styles
+.marketingContent {
+  padding: $spacing-5xl;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  width: 100%;
+  max-width: 540px;
+}
+
+.tagline {
+
+  letter-spacing: 0.5px;
+
+  color: #0c8ce9;
+
+  font-weight: 500;
+  font-size: 1.123rem;
+
+  @include mobile {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.headline {
+  color: #021c2f;
+  font-family: $font-secondary;
+  font-weight: 500;
+  font-style: Bold;
+  font-size: 40px;
+  leading-trim: NONE;
+  line-height: 1.2;
+  letter-spacing: -2.1px;
+  vertical-align: middle;
+  margin-top: $spacing-md;
+
+  @include mobile {
+    font-size: 36px;
+    text-align: center;
+    line-height: normal;
+    margin-top: 11px;
+  }
+}
+
+.description {
+  max-width: $paragraph-max-width;
+  margin-top: $spacing-5xl;
+  color: #696969;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+
+  @include mobile {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+.ctaButtons {
+  display: flex;
+  gap: $spacing-xl;
+  flex-wrap: wrap;
+  margin-top: $spacing-5xl;
+}
+
+.primaryButton {
+  &:hover {
+    background: $brand-600;
+  }
+
+  @include mobile {
+    width: 100% !important;
+  }
+
+  .buttonIconContainer {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%;
+    color: #0c8ce9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.secondaryButton {
+  @include mobile {
+    width: 100% !important;
+  }
+}
+
+.buttonIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 480px;
+  gap: 24px;
+  margin-top: auto;
+  padding-top: $spacing-7xl;
+
+  @include mobile {
+    gap: 18px;
+    flex-direction: column;
+    padding-top: $spacing-4xl;
+  }
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  flex: 1;
+
+  @include mobile {
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.statValue {
+  font-family: $font-secondary;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 100%;
+  color: #021c2f;
+}
+
+.statLabel {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #021c2f;
+}
+
+// Dashboard Preview Styles
+.dashboardPreview {
+  position: relative;
+  width: 100%;
+  padding: 0 $spacing-2xl;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  img {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    border-radius: 26px;
+      
+    @include mobile {
+      border-radius: 16px;
+    }
+  }
+}
+
+.dashboardWrapper {
+  position: relative;
+  transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+  }
+}
+
+.browserFrame {
+  background: $base-white;
+  border-radius: $radius-2xl;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.browserHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-lg $spacing-xl;
+  background: $gray-50;
+  border-bottom: 1px solid $gray-200;
+}
+
+.browserControls {
+  display: flex;
+  gap: $spacing-xs;
+}
+
+.browserDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $gray-300;
+
+  &:nth-child(1) {
+    background: $error-400;
+  }
+
+  &:nth-child(2) {
+    background: $warning-400;
+  }
+
+  &:nth-child(3) {
+    background: $success-400;
+  }
+}
+
+.browserUrl {
+  flex: 1;
+  text-align: center;
+  color: $gray-600;
+  font-size: 0.875rem;
+}
+
+.browserIcons {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.browserIcon {
+  color: $gray-500;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.dashboardContent {
+  display: flex;
+  min-height: 600px;
+  max-height: 800px;
+}
+
+// Sidebar Styles
+.sidebar {
+  width: 240px;
+  background: $base-white;
+  border-right: 1px solid $gray-200;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-xl;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-md;
+  background: $brand-gradient;
+  color: $base-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: $spacing-3xl;
+}
+
+.searchBar {
+  margin-bottom: $spacing-3xl;
+}
+
+.searchInput {
+  width: 100%;
+  padding: $spacing-md $spacing-lg;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  background: $gray-50;
+  color: $gray-700;
+
+  &::placeholder {
+    color: $gray-400;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $brand-400;
+    background: $base-white;
+  }
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+}
+
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.navTitle {
+  color: $gray-500;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: $spacing-sm;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $spacing-lg;
+  color: $gray-600;
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $gray-50;
+    color: $gray-900;
+  }
+
+  &.active {
+    background: $brand-50;
+    color: $brand-600;
+    font-weight: 600;
+  }
+}
+
+.badge {
+  background: $error-500;
+  color: $base-white;
+  border-radius: $radius-full;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.betaTag {
+  background: $warning-100;
+  color: $warning-700;
+  border-radius: $radius-xs;
+  padding: 2px 6px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  padding-top: $spacing-2xl;
+  border-top: 1px solid $gray-200;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.teamSection {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.teamLabel {
+  color: $gray-600;
+  font-size: 0.875rem;
+}
+
+.teamSelect {
+  padding: $spacing-md;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  background: $base-white;
+  color: $gray-700;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: $brand-400;
+  }
+}
+
+.upgradeButton {
+  padding: $spacing-md $spacing-lg;
+  background: $brand-500;
+  color: $base-white;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: $brand-600;
+  }
+}
+
+.copyright {
+  color: $gray-400;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+// Main Content Styles
+.mainContent {
+  flex: 1;
+  padding: $spacing-3xl;
+  overflow-y: auto;
+  background: $gray-50;
+}
+
+.dashboardTitle {
+  color: $gray-900;
+  margin-bottom: $spacing-3xl;
+}
+
+.summaryCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-xl;
+  margin-bottom: $spacing-4xl;
+}
+
+.summaryCard {
+  background: $base-white;
+  padding: $spacing-xl;
+  border-radius: $radius-xl;
+  border: 1px solid $gray-200;
+}
+
+.cardLabel {
+  color: $gray-600;
+  font-size: 0.875rem;
+  margin-bottom: $spacing-sm;
+}
+
+.cardValue {
+  color: $gray-900;
+  font-weight: 700;
+  margin-bottom: $spacing-xs;
+}
+
+.cardChange {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-size: 0.875rem;
+}
+
+.changePositive {
+  color: $success-600;
+}
+
+.changeNegative {
+  color: $error-600;
+}
+
+.changeArrow {
+  font-size: 0.875rem;
+}
+
+.salesOverview {
+  background: $base-white;
+  padding: $spacing-3xl;
+  border-radius: $radius-xl;
+  border: 1px solid $gray-200;
+  margin-bottom: $spacing-4xl;
+}
+
+.salesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-3xl;
+}
+
+.salesTitle {
+  color: $gray-600;
+  font-size: 0.875rem;
+  margin-bottom: $spacing-xs;
+}
+
+.salesAmount {
+  color: $gray-900;
+  font-weight: 700;
+  margin-bottom: $spacing-xs;
+}
+
+.salesChange {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  font-size: 0.875rem;
+}
+
+.salesIncrease {
+  color: $gray-500;
+}
+
+.salesActions {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.filterButton,
+.sortButton {
+  padding: $spacing-md $spacing-lg;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  background: $base-white;
+  color: $gray-700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $gray-50;
+    border-color: $gray-300;
+  }
+}
+
+.chartContainer {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chartPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chartBar {
+  display: flex;
+  gap: $spacing-lg;
+  align-items: flex-end;
+  height: 80%;
+  margin-bottom: $spacing-md;
+}
+
+.barSegment {
+  flex: 1;
+  background: linear-gradient(180deg, $indigo-400 0%, $indigo-600 100%);
+  border-radius: $radius-md $radius-md 0 0;
+  min-height: 40px;
+}
+
+.chartLabels {
+  display: flex;
+  gap: $spacing-lg;
+  justify-content: space-around;
+  color: $gray-600;
+  font-size: 0.875rem;
+}
+
+.salesDistribution {
+  background: $base-white;
+  padding: $spacing-3xl;
+  border-radius: $radius-xl;
+  border: 1px solid $gray-200;
+  margin-bottom: $spacing-4xl;
+}
+
+.distributionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-3xl;
+}
+
+.distributionTitle {
+  color: $gray-900;
+  font-weight: 600;
+}
+
+.monthSelect {
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  background: $base-white;
+  color: $gray-700;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: $brand-400;
+  }
+}
+
+.distributionContent {
+  display: flex;
+  gap: $spacing-4xl;
+  align-items: center;
+}
+
+.distributionList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+.distributionItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  color: $gray-700;
+}
+
+.distributionColor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $indigo-500;
+}
+
+.distributionAmount {
+  margin-left: auto;
+  color: $gray-900;
+  font-weight: 600;
+}
+
+.donutChart {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient($indigo-500 0deg 120deg,
+      $teal-500 120deg 240deg,
+      $cyan-500 240deg 360deg);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: $base-white;
+    border-radius: 50%;
+  }
+}
+
+.integrations {
+  background: $base-white;
+  padding: $spacing-3xl;
+  border-radius: $radius-xl;
+  border: 1px solid $gray-200;
+}
+
+.integrationsTitle {
+  color: $gray-900;
+  font-weight: 600;
+  margin-bottom: $spacing-3xl;
+}
+
+.integrationsList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+.integrationItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.integrationIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-md;
+  background: $gray-100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.integrationName {
+  color: $gray-900;
+  font-weight: 600;
+  margin-bottom: $spacing-xxs;
+}
+
+.integrationType {
+  color: $gray-500;
+  font-size: 0.875rem;
+}
+
+// Responsive Styles
+@media (max-width: 1024px) {
+  .dashboardWrapper {
+    transform: none;
+  }
+
+  .summaryCards {
+    grid-template-columns: 1fr;
+  }
+
+  .distributionContent {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: $spacing-4xl 0;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dashboardContent {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}

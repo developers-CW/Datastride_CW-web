@@ -1,0 +1,19 @@
+@import '../../../styles/base';
+
+.topBanner {
+  background: $gray-50;
+  border-bottom: 1px solid $gray-200;
+  padding: $spacing-md 0;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bannerText {
+  color: $gray-600;
+  margin: 0;
+  line-height: 1.5;
+}
+

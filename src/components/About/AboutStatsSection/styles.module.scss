@@ -1,0 +1,121 @@
+@import "../../../styles/base";
+
+.statsSection {
+  padding: $spacing-8xl 0;
+  background: $base-white;
+  position: relative;
+
+  @include mobile {
+    padding: $spacing-6xl 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+  @include laptop {
+    padding: 0 16px;
+  }
+}
+
+// Heading Styles
+.mainHeading {
+  font-family: $font-secondary;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #0E0E0E;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 16px;
+  letter-spacing: -0.01em;
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+.highlight {
+  background: linear-gradient(90deg, #22c55e 0%, #14b8a6 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Description Styles
+.description {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #696969;
+  max-width: 900px;
+  margin: 16px auto 0;
+
+  @include mobile {
+    font-size: 16px;
+    margin-top: $spacing-2xl;
+    line-height: 1.6;
+  }
+}
+
+// Statistics Grid
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-5xl;
+  margin-top: $spacing-4xl;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-4xl;
+    margin-top: $spacing-6xl;
+  }
+
+  @include mobile {
+    gap: $spacing-4xl $spacing-2xl;
+    margin-top: $spacing-5xl;
+  }
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+// Stat Number Styles with Colors
+.statNumber {
+  font-family: $font-secondary;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  background: linear-gradient(91.76deg, #1FDE00 -0.53%, #3396EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @include mobile {
+    font-size: 38px;
+  }
+}
+
+.statLabel {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #0E0E0E;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}

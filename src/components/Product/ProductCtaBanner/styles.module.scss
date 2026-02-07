@@ -1,0 +1,210 @@
+@import "../../../styles/base";
+
+.ctaBannerSection {
+  padding: $spacing-10xl 0;
+  background: $base-white;
+
+  @include mobile {
+    padding: $spacing-7xl 0;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+// Banner Card
+.bannerCard {
+  background: linear-gradient(90deg, #5B9FED 0%, #4DB8A6 50%, #4EC468 100%);
+  border-radius: 32px;
+  padding: $spacing-8xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: $spacing-4xl;
+  box-shadow: 0 20px 60px rgba(91, 159, 237, 0.3);
+  position: relative;
+  overflow: hidden;
+
+  // Subtle overlay for depth
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  @include tablet {
+    padding: $spacing-6xl $spacing-4xl;
+    border-radius: 24px;
+  }
+
+  @include mobile {
+    padding: $spacing-5xl $spacing-3xl;
+    border-radius: 20px;
+    gap: $spacing-3xl;
+  }
+}
+
+// Team Photos
+.teamPhotos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+  @include mobile {
+    transform: scale(0.85);
+  }
+}
+
+.photoWrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  // border: 4px solid $base-white;
+  overflow: hidden;
+  position: relative;
+  background: $base-white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  &:not(:first-child) {
+    margin-left: -20px;
+  }
+
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px) scale(1.05);
+    z-index: 10;
+  }
+
+  @include mobile {
+    width: 60px;
+    height: 60px;
+    // border: 3px solid $base-white;
+
+    &:not(:first-child) {
+      margin-left: -15px;
+    }
+  }
+}
+
+.teamPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Content
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-3xl;
+
+  @include mobile {
+    gap: $spacing-2xl;
+  }
+}
+
+.mainHeading {
+  font-family: $font-secondary;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $base-white;
+  margin: 0;
+
+  @include tablet {
+    font-size: 32px;
+  }
+
+  @include mobile {
+    font-size: 28px;
+    br {
+      display: none;
+    }
+  }
+}
+
+.emphasize {
+  font-weight: 700;
+  color: $base-white;
+}
+
+.description {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  max-width: 700px;
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    br {
+      display: none;
+    }
+  }
+}
+
+// CTA Button
+.ctaButton {
+  padding: 4px 4px 4px 12px;
+  background: #0C8CE9;
+  color: $base-white;
+  border: none;
+  border-radius: 50px;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xl;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(46, 16, 101, 0.4);
+  margin-top: $spacing-xl;
+
+  &:hover {
+    box-shadow: 0 12px 30px rgba(46, 16, 101, 0.5);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+
+  @include mobile {
+    padding: 14px 28px;
+    font-size: 14px;
+    margin-top: $spacing-md;
+  }
+}
