@@ -9,7 +9,7 @@ const nextConfig = {
     unoptimized: true,
   },
   // Optional: Uncomment if you want to use trailing slashes
-  // trailingSlash: true,
+  trailingSlash: true,
   // Optional: Customize output directory (default is 'out')
   // distDir: 'dist',
 };
