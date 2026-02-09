@@ -66,7 +66,7 @@ const ProductCtaBanner = () => {
             </h2>
 
             <p className={styles.description}>
-              Get onboarding, use-case guidance, and ongoing optimization for your ai analytics platform. Our team helps you get faster outcomes from ai analytics software, without long handoffs.
+              Get onboarding, use-case guidance, and ongoing optimization for your AI analytics platform. Our team helps you get faster outcomes from AI analytics software, without long handoffs.
             </p>
 
             <motion.button
@@ -75,7 +75,7 @@ const ProductCtaBanner = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => router.push("/contact-us")}
             >
-              <span>Contact us</span>
+              <span>Contact Us</span>
               <div
               style={{
                 width: "44px",

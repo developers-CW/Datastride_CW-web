@@ -57,7 +57,7 @@ const ProductServicesSection = () => {
           className={styles.header}
         >
           <h2 className={styles.sectionHeading}>
-            Core Features Of The Ai Analytics Platform
+            Core Features Of The AI Analytics Platform
           </h2>
           <p className={styles.sectionSubtitle}>
             Sia Analytics gives business users, analysts, and developers direct access to data either without technical dependencies, via a chat-based interface or with complete code-level control.

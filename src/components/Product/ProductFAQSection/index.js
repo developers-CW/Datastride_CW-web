@@ -10,51 +10,51 @@ const FAQSection = () => {
   const faqItems = [
     {
       id: 1,
-      title: "Is Sia just a BI tool or a dashboard platform?",
+      title: "What is AI data analytics?",
       content:
-        "Neither. Sia is an end-to-end data analytics platform. It handles data ingestion, transformation, analysis, modeling, automation, and deployment. Dashboards and reports are outputs, not the core function. Teams choose Sia when they need the full data lifecycle managed in one environment, not just visualization.",
+        "AI data analytics uses machine learning, automation, and natural language to turn raw data into decisions. An AI analytics platform like Sia connects sources, runs AI‑driven data analytics, and surfaces intelligent analytics solutions that go beyond dashboards to recommendations and workflows for data‑driven decision intelligence.",
     },
     {
       id: 2,
-      title: "How is Sia different from tools like Tableau, Power BI, or Looker?",
+      title: "Which AI platform is best for analyzing data?",
       content:
-        "Those tools focus on visualization and reporting. Sia starts earlier, at data ingestion, and goes further, to model deployment and workflow automation. If you need a dashboard on top of clean data, traditional BI works fine. If you need to connect raw sources, transform data, build models, and deploy them as APIs, Sia handles that without additional tooling.",
+        "The best AI analytics platform should connect to your stack, support enterprise AI analytics, and automate the full journey from data prep to deployment. Sia is built exactly for this, combining AI-powered business analytics, predictive analytics, and workflow automation in one place instead of stitching together separate tools.",
     },
     {
       id: 3,
-      title: "Can non-technical users actually use Sia without SQL or coding?",
+      title: "What is 4 big data analytics?",
       content:
-        "Yes, Sia is architected for rapid onboarding and intuitive usability. Teams can connect data sources quickly, start exploring insights right away, and adopt the platform with minimal training.",
+        "The four types are descriptive, diagnostic, predictive, and prescriptive analytics. A modern AI analytics platform like Sia supports all four: from describing what happened to running predictive analytics and recommending next actions. That lets enterprises move from static reports to a continuous, AI-driven data analytics loop.",
     },
     {
       id: 4,
-      title: "What types of analysis can Sia run?",
+      title: "What skills are needed for data analytics?",
       content:
-        "Sia supports descriptive analysis (what happened), diagnostic analysis (why it happened), predictive analysis (what will happen), and prescriptive analysis (what to do about it). Specific capabilities include forecasting, anomaly detection, trend analysis, impact analysis, and performance monitoring.",
+        "Core skills include data cleaning, SQL, statistics, and domain understanding. With an AI analytics platform like Sia, non‑technical users can work through chat and guided flows, while experts still leverage machine learning analytics software capabilities—code, models, and pipelines—inside one advanced analytics platform.",
     },
     {
       id: 5,
-      title: "How secure is SIA? Does the LLM leak data?",
+      title: "How is Sia different from typical AI analytics software?",
       content:
-        "Sia is built with enterprise-grade privacy controls, including secure isolation, encrypted processing, and stateless LLM workflows. That means your data isn’t used to train the model and it doesn’t leave your secure environment. Sia also aligns with SOC 2 and ISO 27001 standards, with controls designed to protect security, availability, and confidentiality.",
+        "Most AI analytics software focuses on reports or models in isolation. Sia is an automated analytics platform that uses coordinated AI agents to handle ingestion, transformation, predictive analytics, monitoring, and deployment. Instead of point tools, you get an end‑to‑end, data-driven decision intelligence platform for teams across the enterprise.",
     },
     {
       id: 6,
-      title: "What data sources does Sia connect to?",
+      title: "How Sia compares to traditional data analytics tools?",
       content:
-        "Sia integrates with AWS, Azure, Snowflake, GCP, Oracle, SQL databases, streaming systems, and file storage. Pre-built connectors handle authentication and schema detection. Custom connectors are available for proprietary systems. In the free tier, Sia supports only PostgreSQL and MySQL.",
+        "Traditional tools rely on manual SQL, static dashboards, and separate ML stacks. Sia’s AI analytics platform adds chat-based access, real-time AI analytics, and orchestrated workflows in one environment. It reduces handoffs between teams, cuts infrastructure sprawl, and turns analytics into continuously running, AI-powered business analytics.",
     },
     {
       id: 7,
-      title: "Can we deploy Sia on-premise?",
+      title: "Will AI replace data analyst?",
       content:
-        "Yes. Sia supports cloud deployment (Sia-managed or your cloud account), hybrid deployment, and fully on-premise installation. Your data residency and compliance requirements determine the right model.",
+        "AI won’t replace good analysts, but analysts using an AI analytics platform will replace those who don’t. Sia automates repetitive work—joins, summaries, monitoring—so people focus on framing questions, validating AI-driven data analytics, and driving decisions. It augments human judgment instead of trying to remove it.",
     },
     {
       id: 8,
-      title: "How long does implementation typically take?",
+      title: "What is the best AI tool for analytics?",
       content:
-        "Initial setup, connecting data sources and running first analyses, takes days. Full production deployment with custom workflows, models, and integrations typically takes 4-8 weeks depending on complexity. Sia's services team can accelerate this through guided implementation.",
+        "The “best” AI tool depends on your stack and team maturity. If you need an enterprise AI analytics solution that unifies data engineering, models, and BI, Sia stands out as an AI analytics platform that functions as a predictive analytics platform, automated analytics platform, and deployment layer in one.",
     },
   ];
 
@@ -82,13 +82,13 @@ const FAQSection = () => {
 
             {/* Headline */}
             <h2 className={styles.headline}>
-            Answers for teams evaluating Datastride
+            Answers for teams evaluating Sia
 
             </h2>
 
             {/* Description */}
             <p className={styles.description}>
-            These FAQs cover what Sia replaces, how it works, and what you can automate with our enterprise business intelligence platform.
+            These FAQs cover what Sia is, how it works, and all common questions people have about our AI analytics platform.
             </p>
 
             {/* CTA Button */}
