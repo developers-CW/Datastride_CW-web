@@ -123,7 +123,7 @@ const ContactSection = () => {
           >
             {/* Main Heading */}
             <h2 className={styles.heading}>
-            See Sia in action
+            Request A Demo
             </h2>
 
             {/* Contact Number */}
@@ -140,22 +140,18 @@ const ContactSection = () => {
                 </clipPath>
               </defs>
             </svg>
-              <span className={styles.phoneNumber}>+91 9187466014</span>
+              <span className={styles.phoneNumber}>+91 91874 66014</span>
             </div>
 
-            {/* Service Description */}
-            <p className={styles.description}>
-            Share your details and we'll walk you through how Sia fits your data stack. No generic demo, we'll use examples relevant to your industry and use cases.
+            {/* Address block */}
+            <div className={styles.description}>
+            <p>
+              <strong>Address:</strong> 104, 1st floor, Infantry Techno Park, Infantry Rd, Bengaluru, Karnataka 560001</p>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:info@datastride.ai">info@datastride.ai</a>
             </p>
-
-            {/* Primary CTA Button */}
-            <PrimaryButton
-              label="Connect with us"
-              onClick={() => console.log("Connect with us clicked")}
-              backgroundColor="#0C8CE9"
-              textColor="#FFFFFF"
-              arrowColor="#021C2F"
-            />
+          </div>
 
             {/* Secondary CTA Link */}
             <a href="#" className={styles.secondaryLink}>

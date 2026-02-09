@@ -21,24 +21,31 @@ const Footer = () => {
   };
 
   const footerLinks = {
+    ContactInfo: [
+    {
+      label: "Address: 104, 1st floor, Infantry Techno Park, Infantry Rd, Bengaluru, Karnataka 560001",
+      href: null,
+    },
+    { label: "Phone: +91 91874 66014", href: "tel:+918431042564" },
+    { label: "Email: info@datastride.ai", href: "mailto:info@datastride.ai" },
+  ],
     Product: [
-      { label: "Features", href: "#" },
-      { label: "Integrations", href: "#" },
+      { label: "Product Overview", href: "/product-overview" },
+      { label: "Product Login", href: "https://sianalytics.ai/" },
+      /*{ label: "Integrations", href: "#" },
       { label: "Download", href: "#" },
-      { label: "Pricing", href: "#" },
+      { label: "Pricing", href: "#" },*/
     ],
     Company: [
-      { label: "About us", href: "#" },
-      { label: "Latest Blog", href: "#" },
+      { label: "About Us", href: "/about-us" },
+      /*{ label: "Latest Blog", href: "#" },
       { label: "Our Clients", href: "#" },
-      { label: "Careers", href: "#" },
+      { label: "Careers", href: "#" },*/
     ],
-    Resources: [
-      { label: "Support center", href: "#" },
-      { label: "Documentation", href: "#" },
-      { label: "Community", href: "#" },
-      { label: "Hosting", href: "#" },
-    ],
+    /* Resources: [
+      { label: "Blog", href: "#" },
+      
+    ], */
   };
 
   return (
@@ -116,41 +123,21 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className={styles.newsletterSection}
           >
-            <h3 className={styles.newsletterTitle}>Subscribe to our newsletter.</h3>
+            <h3 className={styles.newsletterTitle}>Make Enterprise Data Finally Feel Simple!</h3>
             <p className={styles.newsletterDescription}>
-              Learn new ways to cut down cost, time and effort with Data Stride's actionable insights!
+              Datastride resolves the complexity of pipelines and models through an intuitive, agent‑driven experience your teams actually want to use.
             </p>
-            <form onSubmit={handleEmailSubmit} className={styles.newsletterForm}>
-              <input
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className={styles.emailInput}
-                required
-              />
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className={styles.submitButton}
-              >
-                →
-              </motion.button>
-            </form>
+            
           </motion.div>
         </div> 
 
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <p className={styles.bottomText}>
-            Providing Complete Data Experience!
+            All Rights Reserved!
           </p>
           <div className={styles.bottomLinks}>
-            <a href="#" className={styles.bottomLink}>
-              Terms & Conditions
-            </a>
-            <a href="#" className={styles.bottomLink}>
+            <a href="/privacy-policy" className={styles.bottomLink}>
               Privacy Policy
             </a>
           </div>
