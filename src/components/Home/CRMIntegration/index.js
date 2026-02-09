@@ -17,7 +17,7 @@ const CRMIntegration = () => {
           </p>
         </div>
         <Image
-          src="/images/crm-integrations2.png"
+          src="/images/crm-integrations2.webp"
           alt="CRM Integration"
           width={1000}
           height={1000}
