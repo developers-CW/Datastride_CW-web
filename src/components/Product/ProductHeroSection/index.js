@@ -39,7 +39,7 @@ const ProductHeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className={styles.description}
           >
-            Build on an ai analytics platform that connects your data, answers questions fast, and automates analysis end to end. Use ai analytics software to run real-time insights, predictive analytics, and reusable workflows without manual reporting.
+            Build on an AI analytics platform that connects your data, answers questions fast, and automates analysis end to end. Use AI analytics software to run real-time insights, predictive analytics, and reusable workflows without manual reporting.
           </motion.p>
 
           {/* CTA Button */}
