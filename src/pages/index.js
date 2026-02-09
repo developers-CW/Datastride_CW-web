@@ -30,6 +30,7 @@ export default function Home() {
       <HeroSection />
       <FeatureCardsSection />
       <FeaturesSection />
+      <CRMIntegration/>
       <TrustSection />
       <TestimonialsSection />
       <FAQSection />

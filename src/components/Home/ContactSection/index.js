@@ -123,7 +123,7 @@ const ContactSection = () => {
           >
             {/* Main Heading */}
             <h2 className={styles.heading}>
-            See SIA in action
+            See Sia in action
             </h2>
 
             {/* Contact Number */}
@@ -140,12 +140,12 @@ const ContactSection = () => {
                 </clipPath>
               </defs>
             </svg>
-              <span className={styles.phoneNumber}>91 8431042564</span>
+              <span className={styles.phoneNumber}>+91 9187466014</span>
             </div>
 
             {/* Service Description */}
             <p className={styles.description}>
-            Share your details and we'll walk you through how SIA fits your data stack. No generic demo, we'll use examples relevant to your industry and use cases.
+            Share your details and we'll walk you through how Sia fits your data stack. No generic demo, we'll use examples relevant to your industry and use cases.
             </p>
 
             {/* Primary CTA Button */}

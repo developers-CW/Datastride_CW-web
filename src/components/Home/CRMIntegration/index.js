@@ -7,11 +7,14 @@ const CRMIntegration = () => {
       <div className={`container ${styles.container}`}>
         <div className={styles.contentWrapper}>
           <p className={styles.subtitle}>
-          Enterprise-Ready
+          Designed for Data-Driven Teams Across Functions
           </p>
           <h2 className={styles.title}>
-          Security and Governance Built into Every Layer
+          Unified Enterprise Data for Smarter Decisions
           </h2>
+          <p className={styles.description}>
+            Sia brings together analytics, model development, workflow automation, and data engineering into a single, cohesive platform. It supports both business and technical teams across the full decision lifecycle.
+          </p>
         </div>
         <Image
           src="/images/crm-integrations2.png"

@@ -36,12 +36,12 @@ const HeroSection = () => {
             >
               {/* Tagline */}
               <p className={styles.tagline}>
-                Agent-driven Intelligence for Analytics, Workflows, and Decisions.
+                Decision Intelligence for Data-Driven Organizations
               </p>
 
               {/* Main Headline */}
               <h1 className={styles.headline}>
-                AI Data Analytics Platform for the Entire Data Value Chain
+                Data to Decisions. Faster & Simpler.
               </h1>
 
               {/* Description */}

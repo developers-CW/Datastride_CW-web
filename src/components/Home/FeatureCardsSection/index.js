@@ -25,7 +25,7 @@ const FeatureCardsSection = () => {
             What Sia Brings Together
           </p>
           <h2 className={styles.heading}>
-            From Data Ingestion to Decision Intelligence.
+            Everything You Need to Move from Data to Decisions
           </h2>
           <p className={styles.description}>
             Sia brings together analytics, model development, workflow automation, and data engineering into a single, cohesive platform. It supports both business and technical teams across the full decision lifecycle.
