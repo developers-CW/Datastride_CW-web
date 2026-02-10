@@ -7,7 +7,7 @@ User-agent: *
 Disallow: /api/*
 
 # Host
-Host: hthttp://datastride.ai/
+Host: https://yourdomain.com
 
 # Sitemaps
-Sitemap: hthttp://datastride.ai/sitemap.xml
+Sitemap: https://yourdomain.com/sitemap.xml
