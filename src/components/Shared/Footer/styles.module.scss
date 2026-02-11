@@ -124,7 +124,16 @@
   align-items: center;
   margin-top: 8px;
 }
+.socialLinks {
+  display: flex;
+  gap: 8px;        // space between icons
+  align-items: center;
+}
 
+.socialLinks :global(svg) {
+  width: 18px;
+  height: 18px;
+}
 .emailInput {
   flex: 1;
   padding: 14px 20px;

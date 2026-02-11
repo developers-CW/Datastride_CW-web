@@ -40,7 +40,7 @@
   min-height: 410px;
   padding: $spacing-4xl;
   border-radius: 24px;
-  background: linear-gradient(123.6deg, #C5EAFF 0%, #CAFFC2 98.08%);
+  background: linear-gradient(123.6deg, #CAFFC2 0%, #CAFFC2 98.08%);
   overflow: hidden;
   
   @include laptop {
@@ -85,20 +85,25 @@
 }
 
 .visionCard {
+  
   position: relative;
   color: $base-white;
-  background: linear-gradient(106.61deg, #0C8CE9 18.54%, #9BD2FA 84.53%);
+  background: linear-gradient(106.61deg, #0C8CE9 18.54%, #0C8CE9 84.53%);
   box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.16), inset 0px 0px 8px rgba(0, 0, 0, 0.16);
 }
 
 .visionLabel {
+  font-family: $font-secondary;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
   color: $base-white;
 }
 
 .visionTitle {
-  width: 100%;
-  max-width: 62%;
-  color: $base-white;
+  max-width: 100%;
+  color: #f3f4f6;
 }
 
 .visionBg {

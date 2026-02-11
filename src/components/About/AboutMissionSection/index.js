@@ -10,7 +10,7 @@ const AboutMissionSection = () => {
       role: "CEO",
       instagram: "#",
       facebook: "#",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/divya-krishna-ramakrishna-08816518/",
     },
     {
       name: "Sumalata Kamat",
@@ -18,7 +18,7 @@ const AboutMissionSection = () => {
       role: "CTO",
       instagram: "#",
       facebook: "#",
-      linkedin: "#",
+      linkedin: "https://in.linkedin.com/in/sumalata-kamat-762243356",
     },
     {
       name: "Karthik Chandrashekhar",
@@ -26,7 +26,7 @@ const AboutMissionSection = () => {
       role: "COO",
       instagram: "#",
       facebook: "#",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/karthik-chandrashekar-11756baa/",
     }
   ];
 
@@ -46,9 +46,8 @@ const AboutMissionSection = () => {
             <div className={styles.missionContent}>
               <span className={styles.missionLabel}>OUR MISSION</span>
               <p className={styles.missionTitle}>
-                Datastride was founded by data veterans who spent years watching enterprises struggle with the same problem: powerful data platforms existed, but teams couldn't unlock their potential without specialists, countless tools, and endless waiting.
+                Datastride exists to prove that enterprise analytics doesn’t have to be slow, specialist‑only, or scattered across tools. We build Sia so any team can move from raw, messy data to reliable decisions quickly, with agentic AI handling the heavy lifting while people stay in control.
               </p>
-              <p className={styles.missionTitle}>We set out to prove that sophisticated analytics doesn't have to be complicated.</p>
             </div>
           </motion.div>
 
@@ -60,20 +59,12 @@ const AboutMissionSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className={`${styles.missionCard} ${styles.visionCard}`}
           >
-            <div className={styles.visionBg}>
-              <Image
-                src="/images/about-vision.webp"
-                alt="Hands reaching together"
-                width={293}
-                height={251}
-                className={styles.visionBgImg}
-              />
-            </div>
+            
 
             <div className={styles.missionContent}>
               <span className={`${styles.missionLabel} ${styles.visionLabel}`}>OUR VISION</span>
               <p className={`${styles.missionTitle} ${styles.visionTitle}`}>
-                We aim to optimize the enterprize decision-making through strategic data intelligence.
+                We aim to build a world where every enterprise treats data as a real‑time co‑pilot, not an afterthought. With Sia’s multi‑agent AI turning fragmented information into clear, explainable actions, decisions become faster, more confident, and consistently aligned with what the business is trying to achieve.
               </p>
             </div>
           </motion.div>

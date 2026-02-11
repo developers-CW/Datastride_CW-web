@@ -385,7 +385,7 @@
 
 // Stat Card Styles
 .statCard {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #0c8ce9 0%, #0c8ce9 100%);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -444,7 +444,7 @@
   text-align: center;
   color: $base-white;
   border-radius: 8px;
-  background: linear-gradient(180deg, #108FE2 0%, #CCEBFF 100%);
+  background: linear-gradient(180deg, #108FE2 0%, #108FE2 100%);
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.16), inset 0px 0px 8px rgba(0, 0, 0, 0.16);
 
   @include laptop {
@@ -479,14 +479,14 @@
   font-weight: 500;
   min-height: 134px;
   padding: 16px 22px;
-  background: linear-gradient(128.3deg, #E7F7E9 3.1%, #2CACAA 100%);
+  background: linear-gradient(128.3deg, #2CACAA 3.1%, #2CACAA 100%);
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.16), inset 0px 0px 8px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
   color: $base-white;
 }
 
 .bentoStatAlt {
-  background: linear-gradient(308.3deg, #0C8CE9 0%, #2CACAA 96.9%);
+  background: linear-gradient(308.3deg, #2CACAA 0%, #2CACAA 96.9%);
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.16), inset 0px 0px 8px rgba(0, 0, 0, 0.16);
 }
 
@@ -568,10 +568,10 @@
   .bentoStat {
     min-height: 0;
     padding: $spacing-md;
-    background: linear-gradient(128.3deg, #79c282 3.1%, #2cacaa 100%);
+    background: linear-gradient(128.3deg, #0c8ce9 3.1%, #0c8ce9 100%);
 
     &.bentoStatAlt {
-      background: linear-gradient(308.3deg, #0c8ce9 0%, #2cacaa 96.9%);
+      background: linear-gradient(308.3deg, #0c8ce9 0%, #0c8ce9 96.9%);
     }
   }
 

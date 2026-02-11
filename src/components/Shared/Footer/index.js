@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 import PrimaryButton from "../../Shared/PrimaryButton";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -140,7 +141,24 @@ const Footer = () => {
             <a href="/privacy-policy" className={styles.bottomLink}>
               Privacy Policy
             </a>
+            <a
+              href="https://www.linkedin.com/company/data-stride-analytics-pvt-ltd/"
+              className={styles.bottomLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="https://www.youtube.com/@SiaVideolibrary"
+              className={styles.bottomLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            > <FaYoutube /> </a>
           </div>
+          
           <motion.button
             onClick={scrollToTop}
             whileHover={{ scale: 1.1 }}
