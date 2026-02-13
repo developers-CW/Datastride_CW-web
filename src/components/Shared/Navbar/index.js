@@ -14,6 +14,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Product", href: "/product-overview" },
+    { name: "Resources", href: "https://datastride.ai/blog/" },
     { name: "About Us", href: "/about-us" },
     //{ name: "Blog", href: "blog-overview" },
 

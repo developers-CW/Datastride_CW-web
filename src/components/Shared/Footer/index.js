@@ -39,8 +39,8 @@ const Footer = () => {
     ],
     Company: [
       { label: "About Us", href: "/about-us" },
-      /*{ label: "Latest Blog", href: "#" },
-      { label: "Our Clients", href: "#" },
+      { label: "Blog", href: "https://datastride.ai/blog/" },
+      /*{ label: "Our Clients", href: "#" },
       { label: "Careers", href: "#" },*/
     ],
     /* Resources: [
@@ -126,7 +126,7 @@ const Footer = () => {
           >
             <h3 className={styles.newsletterTitle}>Make Enterprise Data Finally Feel Simple!</h3>
             <p className={styles.newsletterDescription}>
-              Datastride resolves the complexity of pipelines and models through an intuitive, agent‑driven experience your teams actually want to use.
+              DataStride resolves the complexity of pipelines and models through an intuitive, agent‑driven experience your teams actually want to use.
             </p>
             
           </motion.div>
@@ -135,7 +135,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <p className={styles.bottomText}>
-            All Rights Reserved!
+            Copyright © 2026. All rights reserved.
           </p>
           <div className={styles.bottomLinks}>
             <a href="/privacy-policy" className={styles.bottomLink}>
