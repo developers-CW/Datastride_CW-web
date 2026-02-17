@@ -46,7 +46,7 @@ const AboutMissionSection = () => {
             <div className={styles.missionContent}>
               <span className={styles.missionLabel}>OUR MISSION</span>
               <p className={styles.missionTitle}>
-                Datastride exists to prove that enterprise analytics doesn’t have to be slow, specialist‑only, or scattered across tools. We build Sia so any team can move from raw, messy data to reliable decisions quickly, with agentic AI handling the heavy lifting while people stay in control.
+                DataStride exists to prove that enterprise analytics doesn’t have to be slow, specialist‑only, or scattered across tools. We build Sia so any team can move from raw, messy data to reliable decisions quickly, with agentic AI handling the heavy lifting while people stay in control.
               </p>
             </div>
           </motion.div>

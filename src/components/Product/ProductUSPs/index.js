@@ -12,7 +12,7 @@ const ProductUSPs = () => {
       id: 1,
       number: "01",
       title: "One Platform, End To End",
-      description: "Sia connects data ingestion, preparation, analysis, and reporting into a single flow, so teams don’t have to stitch together separate tools or wait on manual handoffs..",
+      description: "Sia connects data ingestion, preparation, analysis, and reporting into a single flow, so teams don’t have to stitch together separate tools or wait on manual handoffs.",
       hasDescription: true,
     },
     {
@@ -88,7 +88,7 @@ const ProductUSPs = () => {
           transition={{ duration: 0.5 }}
           className={styles.mainHeading}
         >
-         Sia Replaces Dashboard-Only Analytics Tools
+         Sia Goes Beyond Dashboard-Only Analytics Tools
         </motion.h2>
 
         <motion.h2

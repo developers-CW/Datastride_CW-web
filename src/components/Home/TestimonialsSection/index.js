@@ -267,9 +267,12 @@ const TestimonialsSection = () => {
                       )}
                       <span className={styles.title}>{testimonial.title}</span>
                     </div>
+                    {/*
                     <div className={styles.rating}>
                       {renderStars(testimonial.rating)}
                     </div>
+                    */
+                    }
                   </div>
                 </div>
               </div>

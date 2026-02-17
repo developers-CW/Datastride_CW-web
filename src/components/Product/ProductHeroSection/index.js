@@ -83,7 +83,8 @@ const ProductHeroSection = () => {
 
           </motion.button>
 
-          {/* Rating Badge */}
+          {/*
+          //Rating Badge 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,6 +96,7 @@ const ProductHeroSection = () => {
               Built for enterprise AI analytics and governed self-serve reporting
             </span>
           </motion.div>
+          */}
         </div>
 
         {/* Trust Section */}

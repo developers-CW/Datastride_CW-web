@@ -41,7 +41,7 @@ const HeroSection = () => {
 
               {/* Main Headline */}
               <h1 className={styles.headline}>
-                Data to Decisions. Faster & Simpler.
+                Data to Decisions<br/>Faster & Simpler
               </h1>
 
               {/* Description */}
@@ -82,7 +82,7 @@ const HeroSection = () => {
                 /> */}
                 <SecondaryButton
                   label="Explore the Platform"
-                  onClick={() => router.push("/contact-us")}
+                  onClick={() => router.push("/product-overview")}
                   className={styles.secondaryButton}
                 />
               </div>
@@ -95,10 +95,10 @@ const HeroSection = () => {
           {/* Right Side - Dashboard Preview */}
           <div className={styles.dashboardPreview}>
             <Image
-              src="/images/hero-dashboard.png"
+              src="/images/hero-dashboard.webp"
               alt="Dashboard Preview"
-              width={1000}
-              height={1000}
+              width={702}
+              height={619}
               priority
             />
           </div>

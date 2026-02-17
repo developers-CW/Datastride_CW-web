@@ -42,9 +42,9 @@ const AboutHeroSection = () => {
             className={styles.btnWrapper}
           >
           <PrimaryButton
-            label="Explore Sia "
+            label="Explore the Platform"
             arrowColor="#021C2F"
-            onClick={() => router.push("/contact-us")}
+            onClick={() => router.push("/product-overview")}
             className={styles.primaryButton}
             />
           </motion.div>

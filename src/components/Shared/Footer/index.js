@@ -24,7 +24,7 @@ const Footer = () => {
   const footerLinks = {
     ContactInfo: [
     {
-      label: "Address: 104, 1st floor, Infantry Techno Park, Infantry Rd, Bengaluru, Karnataka 560001",
+      label: "Address: 104, 1st floor, Infantry Techno Park, Infantry Rd, Bengaluru, Karnataka 560 001",
       href: null,
     },
     { label: "Phone: +91 91874 66014", href: "tel:+918431042564" },
@@ -134,13 +134,16 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
-          <p className={styles.bottomText}>
-            Copyright © 2026. All rights reserved.
-          </p>
-          <div className={styles.bottomLinks}>
+          <div className={styles.bottomWrap}>
             <a href="/privacy-policy" className={styles.bottomLink}>
               Privacy Policy
             </a>
+            <p className={styles.bottomText}>
+              Copyright © 2026. All rights reserved.
+            </p>
+          </div>
+
+          <div className={styles.bottomLinks}>
             <a
               href="https://www.linkedin.com/company/data-stride-analytics-pvt-ltd/"
               className={styles.bottomLink}

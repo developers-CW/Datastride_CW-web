@@ -38,6 +38,7 @@
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     gap: $spacing-6xl;
+    padding-bottom: 0;
   }
 }
 
@@ -294,6 +295,17 @@
   }
 }
 
+.bottomWrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .bottomText {
   color: #4b5563;
   margin: 0;
@@ -304,16 +316,17 @@
 
 .bottomLinks {
   display: flex;
-  gap: 32px;
+  gap: 22px;
   align-items: center;
   margin-left: auto;
   margin-right: 80px;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: $spacing-md;
-    margin-left: 0;
-    margin-right: 0;
+    // flex-direction: column;
+    // gap: $spacing-md;
+    // margin-left: 0;
+    // margin-right: 0;
+    margin-right: auto;
   }
 }
 
@@ -326,8 +339,8 @@
   transition: color 0.3s ease;
 
   svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
 
   &:hover {
