@@ -74,17 +74,17 @@ const FeatureCardsSection = () => {
                 </li>
               </ul>
               <Image
-                src="/images/card-1-sideimage-1.png"
+                src="/images/card-1-sideimage-1.webp"
                 alt="Hero Icon"
-                width={200}
-                height={200}
+                width={500}
+                height={145}
                 className={styles.sideImageOne}
               />
               <Image
-                src="/images/card-1-sideimage-2.png"
+                src="/images/card-1-sideimage-2.webp"
                 alt="Hero Icon"
-                width={200}
-                height={200}
+                width={400}
+                height={363}
                 className={styles.sideImageTwo}
               />
             </div>
@@ -227,10 +227,10 @@ const FeatureCardsSection = () => {
             <div className={styles.sideImageContainer}>
 
               <Image
-                src="/images/card-6-sideimage-2.png"
+                src="/images/card-6-sideimage-2.webp"
                 alt="Hero Icon"
-                width={200}
-                height={200}
+                width={400}
+                height={471}
                 className={styles.sideImageSTwo}
               />
 
