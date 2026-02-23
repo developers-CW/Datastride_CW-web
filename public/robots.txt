@@ -8,5 +8,6 @@ Disallow: /api/*
 
 # Host
 Host: https://datastride.ai
+
 # Sitemaps
 Sitemap: https://datastride.ai/sitemap.xml
