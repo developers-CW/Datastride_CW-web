@@ -28,6 +28,18 @@
     grid-template-columns: 1fr;
     gap: $spacing-6xl;
   }
+
+  .gmaps {
+    display: block;
+    max-width: 100%;
+
+    iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 0.7;
+      border: none;
+    }
+  }
 }
 
 // Left Content Styles
@@ -55,6 +67,11 @@
   display: flex;
   align-items: center;
   gap: $spacing-md;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .phoneIcon {
@@ -88,8 +105,8 @@
     }
 
     svg {
-      min-width: 24px;
-      width: 24px;
+      min-width: 18px;
+      width: 18px;
       height: 30px;
     }
   }

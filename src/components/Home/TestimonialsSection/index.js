@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,6 +7,33 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 
 const TestimonialsSection = () => {
+
+  const useSlidesToShow = () => {
+    const getSlides = (width) => {
+      if (width < 480) return 1;
+      if (width < 768) return 2;
+      if (width < 1024) return 3;
+      return 4;
+    };
+
+    const [slides, setSlides] = useState(1);
+
+    useEffect(() => {
+      const update = () => {
+        setSlides(getSlides(window.innerWidth));
+      };
+
+      update(); // 👈 initial calculation
+      window.addEventListener("resize", update);
+
+      return () => window.removeEventListener("resize", update);
+    }, []);
+
+    return slides;
+  };
+
+  const slidesToShow = useSlidesToShow();
+
   const testimonials = [
     {
       id: 1,
@@ -119,12 +147,11 @@ const TestimonialsSection = () => {
     );
   };
 
-
   const sliderSettings = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     // autoplay: true,
     // autoplaySpeed: 5000,
@@ -132,29 +159,6 @@ const TestimonialsSection = () => {
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
   const renderStars = (rating) => {
@@ -227,13 +231,7 @@ const TestimonialsSection = () => {
         </motion.p>
 
         {/* Testimonials Carousel */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className={styles.carouselWrapper}
-        >
+        <div className={styles.carouselWrapper}>
           <Slider {...sliderSettings} className={styles.slider}>
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className={styles.slide}>
@@ -306,7 +304,7 @@ const TestimonialsSection = () => {
           </div>
           */}
 
-        </motion.div>
+        </div>
       </div>
     </section>
   );

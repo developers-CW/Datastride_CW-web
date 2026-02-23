@@ -135,12 +135,12 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <div className={styles.bottomWrap}>
-            <a href="/privacy-policy" className={styles.bottomLink}>
-              Privacy Policy
-            </a>
             <p className={styles.bottomText}>
               Copyright © 2026. All rights reserved.
             </p>
+            <a href="/privacy-policy" className={styles.bottomLink}>
+              Privacy Policy
+            </a>
           </div>
 
           <div className={styles.bottomLinks}>
