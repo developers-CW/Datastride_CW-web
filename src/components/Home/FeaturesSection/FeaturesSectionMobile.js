@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./FeaturesSectionMobile.module.scss";
+import Image from "next/image";
+
 
 const FeaturesSectionMobile = ({ cards }) => {
   const sliderSettings = {
@@ -30,8 +32,14 @@ const FeaturesSectionMobile = ({ cards }) => {
             >
               {/* Number Badge */}
               <div className={styles.numberBadge}>
+                <Image src={`/images/number-badge-${card.id}.svg`} alt="Number Badge" width={48} height={48} className={styles.numberBadgeImage} />
+              </div>
+
+              {/* Number Badge 
+              <div className={styles.numberBadge}>
                 <span className={styles.number}>{card.number}</span>
               </div>
+              */}
 
               {/* Title */}
               <h3 className={styles.cardTitle}>

@@ -72,7 +72,7 @@ const Footer = () => {
                 <span className={styles.ctaBadge}>Get Started</span>
 
                 <h2 className={styles.ctaHeading}>
-                  Stop wasting time switching tools. Start making data-driven decisions.
+                  Start Accelerating Enterprise Decisions Today.
                 </h2>
 
                 <p className={styles.ctaDescription}>
@@ -103,7 +103,10 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 className={styles.navColumn}
               >
-                <h3 className={styles.navTitle}>{category}</h3>
+               <h3 className={styles.navTitle}>
+                {category === "ContactInfo" ? "Contact Info" : category}
+                </h3>
+                
                 <ul className={styles.navList}>
                   {links.map((link, index) => (
                     <li key={index} className={styles.navItem}>
@@ -126,7 +129,7 @@ const Footer = () => {
           >
             <h3 className={styles.newsletterTitle}>Make Enterprise Data Finally Feel Simple!</h3>
             <p className={styles.newsletterDescription}>
-              DataStride resolves the complexity of pipelines and models through an intuitive, agent‑driven experience your teams actually want to use.
+              Datastride Analytics resolves the complexity of pipelines and models through an intuitive, agent‑driven experience your teams actually want to use.
             </p>
             
           </motion.div>

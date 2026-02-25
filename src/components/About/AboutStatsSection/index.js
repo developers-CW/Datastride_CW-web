@@ -36,7 +36,7 @@ const AboutStatsSection = () => {
           transition={{ duration: 0.6 }}
           className={styles.mainHeading}
         >
-          Analytics shouldn't require a team of specialists. <br/> It should require one platform.
+          Accelerating Enterprise Decision Velocity
           {/* <span className={styles.highlight}>help of Database</span> */}
         </motion.h2>
 
@@ -48,7 +48,7 @@ const AboutStatsSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className={styles.description}
         >
-          Our agentic analytics platform orchestrates AI agents to handle ingestion, transformation, modeling, and deployment—so your teams focus on what matters: business decisions.
+          Datastride Analytics is an Al-native technology company focused on accelerating enterprise decision velocity. Through Sia, our unified decision intelligence platform, we enable organizations to move from fragmented data to decisive action, transforming Data to Decisions faster and simpler. By combining advanced Al with deep business insight, we eliminate decision bottlenecks, unify intelligence across teams, and deliver measurable enterprise impact.
         </motion.p>
 
         {/* Statistics Grid */}

@@ -127,14 +127,15 @@ const FeaturesSection = () => {
                 } ${hoveredCard === card.id ? styles.expanded : ""}`}
             >
               {/* Number Badge */}
-              {/* <div className={styles.numberBadge}>
-                <Image src={`/images/number-badge-${card.id}.svg`} alt="Number Badge" width={48} height={48} className={styles.numberBadgeImage} />
-              </div> */}
+              <div className={styles.numberBadge}>
+                <Image src={`/images/number-badge-${card.id}.svg`} alt="Number Badge" width={72} height={72} className={styles.numberBadgeImage} />
+              </div>
               
-              {/* Number Badge */}
+              {/* Number Badge 
               <div className={styles.numberBadge}>
                 <span className={styles.number}>{card.number}</span>
               </div>
+              */}
 
               {/* Title */}
               <motion.h3
