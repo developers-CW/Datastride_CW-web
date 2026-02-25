@@ -140,7 +140,9 @@ const ContactSection = () => {
                   </clipPath>
                 </defs>
               </svg>
-              <span className={styles.phoneNumber}>+91 91874 66014</span>
+              <span className={styles.phoneNumber}> 
+                <strong>Phone:</strong> +91 91874 66014
+              </span>
             </div>
 
             {/* Address block */}
