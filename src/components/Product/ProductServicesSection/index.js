@@ -4,43 +4,33 @@ import styles from "./styles.module.scss";
 const ProductServicesSection = () => {
   const services = [
     {
-      title: "Conversational Insights",
-      description: "Ask questions in plain language. Get instant answers from any connected dataset.",
+      title: "Conversational Intelligence",
+      description: "Ask questions and get instant decision-ready insights.",
       link: "",
     },
     {
-      title: "Automated Workflows",
-      description: "Describe what you need. Sia builds interactive dashboards automatically.",
+      title: "Real-Time Monitoring",
+      description: "Track KPIs live and act before issues escalate.",
       link: "",
     },
     {
-      title: "Predictive Analytics",
-      description: "Run forecasting, anomaly detection, and trend analysis through guided workflows.",
+      title: "Unified Data Foundation",
+      description: "Unify and orchestrate enterprise data with governance.",
       link: "",
     },
     {
-      title: "Real-Time Data Monitoring",
-      description: "Track KPIs as they update. Set alerts and act before problems escalate.",
-      link: "",
-    },
-    {
-      title: "Data Engineering at Scale",
-      description: "Build ETL pipelines using 350+ Pandas and PySpark functions or custom code.",
-      link: "",
-    },
-    {
-      title: "Model Building and Deployment",
-      description: "Train ML models, validate performance, and deploy via API. No separate MLOps needed.",
+      title: "Model Deployment ",
+      description: "Train and deploy ML models via API-first architecture.",
       link: "",
     },
     {
       title: "Workflow Automation",
-      description: "Design automated workflows with scheduling, triggers, and instant API deployment.",
+      description: "Embed AI into operational workflows with instant execution.",
       link: "",
     },
     {
-      title: "Version-Controlled Pipelines",
-      description: "Track changes, roll back when needed, and collaborate without conflicts.",
+      title: "Version Control & Governance",
+      description: "Manage changes and collaborate with full visibility.",
       link: "",
     },
   ];

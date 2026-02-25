@@ -60,7 +60,7 @@
 // Services Grid
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: $spacing-3xl;
 
   @include laptop {
