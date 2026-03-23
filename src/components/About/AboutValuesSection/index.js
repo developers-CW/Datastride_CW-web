@@ -5,33 +5,38 @@ import Image from "next/image";
 const AboutValuesSection = () => {
   const values = [
     {
-      title: "Simplicity at Scale",
-      description: "We design analytics that stay simple to use, even as data, teams, and complexity grow.",
-      icon: "/images/fly.svg",
+      title: "Impact That Matters",
+      description: "We focus on business challenges and build meaningful solutions that create measurable impact for the organizations.",
+      icon: "/images/impact-matters.svg",
+      // icon: "/images/fly.svg",
       // icon: "fly",
       bgColor: "mint",
     },
     {
-      title: "Intelligent Automation",
-      description: "We automate repetitive work with agentic AI while keeping humans in control of outcomes.",
-      icon: "/images/tri.svg",
+      title: "Progress Together",
+      description: "Talent can emerge from anywhere. We invest in people, nurture their potential, and create an environment where individuals evolve alongside the company.",
+      icon: "/images/progress-together.svg",
+      // icon: "/images/tri.svg",
       // icon: "tri",
       bgColor: "lavender",
     },
     {
-      title: "Security by Design",
-      description: "Enterprise data demands strong governance, secure deployment, and compliance-first thinking.",
-      icon: "/images/blob.svg",
+      title: "Diversity & Equity",
+      description: "Diverse perspectives lead to stronger ideas and better outcomes. We cultivate an environment of equity, inclusion, and respect where everyone has the opportunity to contribute.",
+      icon: "/images/diversity-equity.svg",
+      // icon: "/images/blob.svg",
       // icon: "blob",
       bgColor: "mint",
     },
     {
-      title: "Outcome-Focused Thinking",
-      description: "We measure success by real business impact, not just technical delivery.",
-      icon: "/images/fly.svg",
+      title: "Think Beyond",
+      description: "We question assumptions and understand context to reframe problems and uncover better, more effective paths forward.",
+      icon: "/images/think-beyond.svg",
+      // icon: "/images/fly.svg",
       // icon: "fly",
       bgColor: "lavender",
     },
+    /*
     {
       title: "Responsible AI",
       description: "We build AI systems that are transparent, guided, and designed to support human decision-making.",
@@ -46,6 +51,7 @@ const AboutValuesSection = () => {
       // icon: "blob",
       bgColor: "lavender",
     },
+    */
   ];
 
   return (
@@ -79,8 +85,8 @@ const AboutValuesSection = () => {
                   <Image
                     src={value.icon}
                     alt={value.title}
-                    width={42}
-                    height={48}
+                    width={40}
+                    height={40}
                   />
                 </div>
                 <h3 className={styles.valueTitle}>{value.title}</h3>
