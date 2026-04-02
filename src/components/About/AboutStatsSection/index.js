@@ -52,6 +52,7 @@ const AboutStatsSection = () => {
         </motion.p>
 
         {/* Statistics Grid */}
+        {/*
         <div className={styles.statsGrid}>
           {stats.map((stat, index) => (
             <motion.div
@@ -69,6 +70,7 @@ const AboutStatsSection = () => {
             </motion.div>
           ))}
         </div>
+        */}
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import AboutHeroSection from "../components/About/AboutHeroSection";
 import AboutStatsSection from "../components/About/AboutStatsSection";
 import AboutMissionSection from "../components/About/AboutMissionSection";
@@ -8,6 +9,9 @@ import AboutValuesSection from "../components/About/AboutValuesSection";
 export default function AboutUs() {
   return (
     <>
+      <Head>
+        <title>About Us - Datastride Analytics</title>
+      </Head>
       <AboutHeroSection />
       <AboutStatsSection />
       <AboutMissionSection />

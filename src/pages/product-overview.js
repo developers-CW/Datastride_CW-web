@@ -7,10 +7,14 @@ import FeaturesSection from "@/components/Product/ProductUSPs";
 import TestimonialsSection from "@/components/Home/TestimonialsSection";
 import ProductFAQSection from "@/components/Product/ProductFAQSection";
 import ProductUSPs from "@/components/Product/ProductUSPs";
+import Head from "next/head";
 
 export default function ProductOverview() {
   return (
     <>
+      <Head>
+        <title>Product Overview - Datastride Analytics</title>
+      </Head>
       <ProductHeroSection />
       <ProductServicesSection />
       <ProductCtaBanner />

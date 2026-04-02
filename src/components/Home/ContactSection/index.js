@@ -137,7 +137,7 @@ const ContactSection = () => {
 </svg>
 
               <span className={styles.phoneNumber}> 
-                <strong>Phone:</strong> +91 91874 66014
+                +91 91874 66014
               </span>
             </div>
 
@@ -151,7 +151,7 @@ const ContactSection = () => {
 
 
                 <span>
-                  <strong>Address:</strong> 104, 1st floor, Infantry Techno Park, Infantry Rd, Bengaluru, Karnataka 560 001
+                  104, 1st floor, Infantry Techno Park, Infantry Rd, Bengaluru, Karnataka 560 001
                 </span>
               </p>
               <p>
@@ -163,7 +163,6 @@ const ContactSection = () => {
                 </svg>
 
                 <span>
-                  <strong>Email:</strong>{" "}
                   <a href="mailto:info@datastride.ai">info@datastride.ai</a>
                 </span>
               </p>

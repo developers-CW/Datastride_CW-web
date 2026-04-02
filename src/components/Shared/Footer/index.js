@@ -129,7 +129,7 @@ const Footer = () => {
           >
             <h3 className={styles.newsletterTitle}>Make Enterprise Data Finally Feel Simple!</h3>
             <p className={styles.newsletterDescription}>
-              Datastride Analytics resolves the complexity of pipelines and models through an intuitive, agent‑driven experience your teams actually want to use.
+              Datastride Analytics builds AI-powered platforms that turn enterprise data into decisive action. Faster & Simpler
             </p>
             
           </motion.div>

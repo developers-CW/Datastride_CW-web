@@ -39,7 +39,7 @@ const ProductHeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className={styles.description}
           >
-            Build on an AI analytics platform that connects your data, answers questions fast, and automates analysis end to end. Use AI analytics software to run real-time insights, predictive analytics, and reusable workflows without manual reporting.
+            Sia is a Unified, AI-native Decision Intelligence Platform that accelerates enterprises from data to decisions. It connects your data, answers questions fast, and automates analysis end-to-end in one secure, governed environment.
           </motion.p>
 
           {/* CTA Button */}

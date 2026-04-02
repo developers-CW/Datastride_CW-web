@@ -1,7 +1,11 @@
+import Head from "next/head";
 
 export default function PrivacyPolicy() {
   return (
     <>
+      <Head>
+        <title>Privacy Policy - Datastride Analytics</title>
+      </Head>
       <div className="privacyPage">
         <div className="privacyContainer">
           <h1 className="privacyTitle">Privacy Policy</h1>

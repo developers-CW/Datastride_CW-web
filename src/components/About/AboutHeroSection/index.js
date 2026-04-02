@@ -29,9 +29,10 @@ const AboutHeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className={styles.subtitle}
           >
-            Most enterprises lose 70% of their analytics potential to manual work. We built Sia to reclaim that, turning data chaos into AI-driven decisions without the bottlenecks.
+            Most enterprises lose up to 70% of their analytics potential to manual work. Our strength lies in automating their analytics workflows, turning data chaos into AI-driven decisions without the bottlenecks.
           </motion.p>
 
+          {/* 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,6 +49,7 @@ const AboutHeroSection = () => {
             className={styles.primaryButton}
             />
           </motion.div>
+          */}
 
           {/* <motion.button
             initial={{ opacity: 0, y: 20 }}

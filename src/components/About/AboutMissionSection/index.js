@@ -11,6 +11,7 @@ const AboutMissionSection = () => {
       instagram: "#",
       facebook: "#",
       linkedin: "https://www.linkedin.com/in/divya-krishna-ramakrishna-08816518/",
+      bio: "Divya is reimagining how enterprises operationalize AI. She believes intelligence shouldn't live in dashboards—it must drive decisions at scale. Blending advanced analytics with sensor intelligence, she sets Datastride’s strategic vision, challenging organizations to move from experimentation to execution and turning complex capabilities into measurable business advantage.",
     },
     {
       name: "Sumalata Kamat",
@@ -19,6 +20,7 @@ const AboutMissionSection = () => {
       instagram: "#",
       facebook: "#",
       linkedin: "https://in.linkedin.com/in/sumalata-kamat-762243356",
+      bio: "Sumalata architects intelligence into reality. As the technical force behind Sia's multi-agent architecture, she bridges the gap between cutting-edge data science and enterprise-grade engineering. She designs systems where AI is not just powerful, but resilient, governed, and built to last—transforming ambitious intent into scalable execution.",
     },
     {
       name: "Karthik Chandrashekhar",
@@ -27,6 +29,7 @@ const AboutMissionSection = () => {
       instagram: "#",
       facebook: "#",
       linkedin: "https://www.linkedin.com/in/karthik-chandrashekar-11756baa/",
+      bio: "Karthik turns vision into velocity. With a rare combination of engineering depth, product intuition, and operational precision, he builds the execution engine that makes bold ideas real. He ensures innovation translates into tangible impact, aligning product and operations to help enterprises adopt AI confidently and unlock sustained growth.",
     }
   ];
 
@@ -91,6 +94,9 @@ const AboutMissionSection = () => {
                 />
               </div>
               <h4 className={styles.teamName}>{member.name}</h4>
+              
+              <p className={styles.teamBio}>{member.bio}</p>
+
               <div className={styles.roleWithSocial}>
                 <div className={styles.teamRole}>{member.role}</div>
 

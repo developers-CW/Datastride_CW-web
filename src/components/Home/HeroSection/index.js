@@ -94,6 +94,7 @@ const HeroSection = () => {
 
           {/* Right Side - Dashboard Preview */}
           <div className={styles.dashboardPreview}>
+            {/*
             <Image
               src="/images/hero-dashboard.webp"
               alt="Dashboard Preview"
@@ -101,6 +102,20 @@ const HeroSection = () => {
               height={619}
               priority
             />
+            */}
+            
+            <Image
+              src="/images/home-dashboard.webp"
+              alt="Dashboard Preview"
+              width={512}
+              height={512}
+              priority
+            />
+            
+            {/* <video width={610} height={610} autoPlay muted loop playsInline >
+              <source src="/video/hero-dashboard.webm" type="video/webm" />
+              <source src="/video/hero-dashboard.mp4" type="video/mp4" />
+            </video> */}
           </div>
         </div>
       </div>
